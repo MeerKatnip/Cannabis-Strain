@@ -1,0 +1,45 @@
+<html>
+    <head></head>
+    <heading><h1>Grocery Store App Using Firebase</h1></heading>
+    <body>
+        <p>To ADD a grocery store entry, type in the name of the grocery store below:</p>
+        <input type="text" placeholder="Enter Name" id="postTitleTextBox" required/>
+        <p>To ADD a grocery store entry, type in the address of the grocery store below:</p>
+        <input type="address" placeholder="Enter Address" id="postBodyTextBox" required/>
+        
+        <button id="savePostButton">ADD Store Information</button>
+        <p>        </p>
+        
+        <ul id="postListUL"></ul>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+
+<!-- Firebase Realtime Database Library -->
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCOdQspWtJxFq7imHjKvpfVemydzqwNkhw",
+    authDomain: "grocerystoreapp-fbb50.firebaseapp.com",
+    databaseURL: "https://grocerystoreapp-fbb50.firebaseio.com",
+    projectId: "grocerystoreapp-fbb50",
+    storageBucket: "grocerystoreapp-fbb50.appspot.com",
+    messagingSenderId: "178374277547",
+    appId: "1:178374277547:web:702c414b8c72792f37baee"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+
+
+<script src="js/grocery-store-app.js"></script>
+
+    </body>
+</html>
