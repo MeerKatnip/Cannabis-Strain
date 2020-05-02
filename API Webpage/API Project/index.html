@@ -14,7 +14,7 @@
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Cannabis Strain App</a>
+    <a class="navbar-brand" href="http://cannabis-strain-app.surge.sh/display-all-strains">Cannabis Strain App</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -23,24 +23,22 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <button class="nav-link" id="allButton">All Strains<span class="sr-only">(current)</span></button>
+          <a class="nav-link" role="button" href="" >Home<span class="sr-only">(current)</span></a>
         </li>
         <!-- <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
         </li> -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">Effects</a>
+            aria-haspopup="true" aria-expanded="false">View </a>
           
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <button id="relaxedEffect" class="dropdown-item">Relaxed</button>
-            <button id="hungryEffect" class="dropdown-item">Hungry</button>
+            <button id="" class="dropdown-item">Strain Type</button>
+            <button id="" class="dropdown-item">Strain Effects</button>
+            <button id="" class="dropdown-item">Strain Flavors</button>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <button class="dropdown-item" id="allButton">All Strains</button>
           </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </li>
       </ul>
     </div>
@@ -48,10 +46,13 @@
   <!-- <img src="images/cannabis-header.jpg" class="img-fluid" alt="Responsive image"> -->
   <h1>Cannabis Strain App</h1>
   <p></p>
-  <label for="effectSelector">Choose an effect:</label>
+  <p>Cannabis can be used for recreationally and/or to help treat medical conditions. Cannabis has positive effects and some negative side effects as well.</p>
+  <label for="effectSelector">Use the selector below to filter cannabis strains by either positive effects, medical conditions, or negative side effects:</label>
   <select id="effectSelector">
   </select>
   <p></p>
+  <button id="searchEffects" onclick="effectSelector">Search</button>
+  <div id="effectInfo"> </div>
   <div id="strainList"></div>
 
   <!-- <div class="font" id="strainList"></div> -->
