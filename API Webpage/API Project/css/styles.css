@@ -2,6 +2,68 @@
     width: 100%;
     height: 50%;
 }
+
+#divContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-block: 4px;
+    padding: 2px;
+    background-color: green;
+
+}
+
+.containerCell {
+    width: 40%;
+    float: left;
+    padding: 10px;
+    border-radius: 25px;
+    border: 2px solid #003e00;
+    background: lightgreen;
+
+}
+
+#effectContainer {
+    border: 3px solid lightgreen;
+    border-radius: 25px;
+    margin: 10px;
+}
+
+#effectInfo {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+#effectSearchContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-block: 4px;
+    padding: 2px;
+    background-color: green;
+
+}
+
+.effectContainerCell {
+    width: 30%;
+    float: left;
+    padding: 10px;
+    border-radius: 25px;
+    border: 2px solid #003e00;
+    background: lightgreen;
+
+}
+
+
+
+body {
+    background-color: green;
+}
+
+#navBar {
+    background: rgb(192, 255, 192);
+}
 /* div {
  display: flexbox; 
 } */
