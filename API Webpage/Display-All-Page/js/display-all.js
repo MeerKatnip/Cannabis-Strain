@@ -1,4 +1,4 @@
-let strainList = document.getElementById("strainList")
+let displayDiv = document.getElementById("displayDiv")
 
 fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/all")
     .then(response => response.json())
@@ -18,6 +18,6 @@ fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/all")
             </div>
         </div>`
     }
-    strainList.innerHTML = strainItems
+    displayDiv.innerHTML = strainItems
 })
 
