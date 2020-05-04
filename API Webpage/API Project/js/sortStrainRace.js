@@ -192,70 +192,12 @@ searchFlavorButton.addEventListener("click", function () {
 
 
 //--------------------------------------------------------------------
-// CODE FOR STRAIN SELECTOR BY RACE
+// CODE FOR STRAIN SELECTOR BY TYPE
 //--------------------------------------------------------------------
-// sativa button
-sativaButtonBody.addEventListener("click", function () {
-    fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/race/sativa")
-        .then(response => response.json())
-        .then(typeClasses => {
-            console.log(typeClasses)
-            let typeItem = typeClasses.map(function (type) {
-                return `<div class="card w-75" style="width: 18rem;">
-                <div class="card-body" class="card text-center">
-                <h4><b>${type.name}</b></h4>
-                <h6 class="card-subtitle mb-2 text-muted">${type.id}</h6>
-                <p id="descList" class="card-text"></p>
-                <p class="card-text"><b>Race: </b>${type.race}</p>
-                </div>
-            </div>`
-            })
-            divDisplay.innerHTML = typeItem.join("")
-        })
-})
 
-    // indica button
-indicaButtonBody.addEventListener("click", function () {
-    fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/race/indica")
-        .then(response => response.json())
-        .then(typeClasses => {
-            console.log(typeClasses)
-            let typeItem = typeClasses.map(function (type) {
-                return `<div class="card w-75" style="width: 18rem;">
-                <div class="card-body" class="card text-center">
-                <h4><b>${type.name}</b></h4>
-                <h6 class="card-subtitle mb-2 text-muted">${type.id}</h6>
-                <p id="descList" class="card-text"></p>
-                <p class="card-text"><b>Race: </b>${type.race}</p>
-                </div>
-            </div>`
-            })
-            divDisplay.innerHTML = typeItem.join("")
-        })
-})
-
-    // hybrid button
-hybridButtonBody.addEventListener("click", function () {
-    fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/race/hybrid")
-        .then(response => response.json())
-        .then(typeClasses => {
-            console.log(typeClasses)
-            let typeItem = typeClasses.map(function (type) {
-                return `<div class="card w-75" style="width: 18rem;">
-                <div class="card-body" class="card text-center">
-                <h4><b>${type.name}</b></h4>
-                <h6 class="card-subtitle mb-2 text-muted">${type.id}</h6>
-                <p id="descList" class="card-text"></p>
-                <p class="card-text"><b>Race: </b>${type.race}</p>
-                </div>
-            </div>`
-            })
-            divDisplay.innerHTML = typeItem.join("")
-        })
-})
 
 function strainRaceOptions(strainPosts) {
-    divDisplay.innerHTML = ""
+    displayDiv.innerHTML = ""
     let strainRaceItems = ""
     for (let index = 0; index < Object.values(strainRaceItems).length; index++) {
         const strainRaceItem = Object.values(strainPosts)[index]
@@ -273,7 +215,7 @@ function strainRaceOptions(strainPosts) {
             </div>
         </div>`
     }
-    divDisplay.innerHTML = strainRaceItems
+    displayDiv.innerHTML = strainRaceItems
 }
 
 allButtonMenu.addEventListener("click", function () {
@@ -284,96 +226,151 @@ allButtonMenu.addEventListener("click", function () {
         })
 })
 
+// sativa button
+sativaButtonBody.addEventListener("click", function () {
+    fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/race/sativa")
+        .then(response => response.json())
+        .then(typeClasses => {
+            let typeItem = typeClasses.map(function (type) {
+                return `<div class="card w-75" style="width: 18rem;">
+                <div class="card-body" class="card text-center">
+                <h4><b>${type.name}</b></h4>
+                <h6 class="card-subtitle mb-2 text-muted">${type.id}</h6>
+                <p id="descList" class="card-text"></p>
+                <p class="card-text"><b>Race: </b>${type.race}</p>
+                </div>
+            </div>`
+            })
+            displayDiv.innerHTML = typeItem.join("")
+        })
+})
+
+// indica button
+indicaButtonBody.addEventListener("click", function () {
+    fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/race/indica")
+        .then(response => response.json())
+        .then(typeClasses => {
+            let typeItem = typeClasses.map(function (type) {
+                return `<div class="card w-75" style="width: 18rem;">
+                <div class="card-body" class="card text-center">
+                <h4><b>${type.name}</b></h4>
+                <h6 class="card-subtitle mb-2 text-muted">${type.id}</h6>
+                <p id="descList" class="card-text"></p>
+                <p class="card-text"><b>Race: </b>${type.race}</p>
+                </div>
+            </div>`
+            })
+            displayDiv.innerHTML = typeItem.join("")
+        })
+})
+
+// hybrid button
+hybridButtonBody.addEventListener("click", function () {
+    fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/race/hybrid")
+        .then(response => response.json())
+        .then(typeClasses => {
+            let typeItem = typeClasses.map(function (type) {
+                return `<div class="card w-75" style="width: 18rem;">
+                <div class="card-body" class="card text-center">
+                <h4><b>${type.name}</b></h4>
+                <h6 class="card-subtitle mb-2 text-muted">${type.id}</h6>
+                <p id="descList" class="card-text"></p>
+                <p class="card-text"><b>Race: </b>${type.race}</p>
+                </div>
+            </div>`
+            })
+            displayDiv.innerHTML = typeItem.join("")
+        })
+})
 
 
 
+// function strainRaceOptions() {
+//     fetch("http://http://strainapi.evanbusse.com/0d4ocxj/strains/search/all")
+//         .then(response => response.json())
+//         .then(strainRacePosts => {
+//             // flavorSelector.innerHTML = ""
+//             let raceItem = strainRacePosts.map(function (race) {
+//                 return `<select>
+//             <option name="race" value="${race}">${race}</option>`
+//             })
+//             strainRaceSelector.innerHTML = raceItem
+//         })
+// }
 
-    // function strainRaceOptions() {
-    //     fetch("http://http://strainapi.evanbusse.com/0d4ocxj/strains/search/all")
-    //         .then(response => response.json())
-    //         .then(strainRacePosts => {
-    //             // flavorSelector.innerHTML = ""
-    //             let raceItem = strainRacePosts.map(function (race) {
-    //                 return `<select>
-    //             <option name="race" value="${race}">${race}</option>`
-    //             })
-    //             strainRaceSelector.innerHTML = raceItem
-    //         })
-    // }
+// strainRaceOptions()
 
-    // strainRaceOptions()
+// searchRaceButton.addEventListener("click", function () {
+//     // displayDiv.innerHTML = ""
+//     var f = document.getElementById("strainRaceSelector").selectedIndex;
+//     console.log(f)
+//     var raceSelection = document.getElementsByName("race")[f].value;
+//     console.log(raceSelection)
+//     let raceURL = `http://strainapi.evanbusse.com/0d4ocxj/strains/search/all/${raceSelection}`
+//     fetch(raceURL)
+//         .then(response => response.json())
+//         .then(strainRacePosts => {
 
-    // searchRaceButton.addEventListener("click", function () {
-    //     // displayDiv.innerHTML = ""
-    //     var f = document.getElementById("strainRaceSelector").selectedIndex;
-    //     console.log(f)
-    //     var raceSelection = document.getElementsByName("race")[f].value;
-    //     console.log(raceSelection)
-    //     let raceURL = `http://strainapi.evanbusse.com/0d4ocxj/strains/search/all/${raceSelection}`
-    //     fetch(raceURL)
-    //         .then(response => response.json())
-    //         .then(strainRacePosts => {
+//             let raceItem = strainRacePosts.map(function (race) {
+//                 return `<div class="card w-75" style="width: 18rem;">
+//                             <div class="card-body" class="card text-center">
+//                                 <h4><b>${race.name}</b></h4>
+//                                 <h6 class="card-subtitle mb-2 text-muted">${race.id}</h6>
+//                                 <p class="card-text">${race.race}</p>
+//                                 <p class="card-text">${race.flavor}</p>
+//                             </div>
+//                         </div>`
+//             })
+//             console.log(raceItem)
+//             displayDiv.innerHTML = raceItem.join("")
+//         })
+// })
+//--------------------------------------------------------------------
+// CODE TO SEARCH DESCRIPTION BY STRAIN ID NUMBER 
+//--------------------------------------------------------------------
+// displayDiv.innerHTML = ""
+// var setupArray = [...Array(2162).keys()].map(x => x+1);
+// console.log(setupArray)
+// // var idArray = [setupArray]
+// // console.log(idArray);
+// for (let index = 0; index < setupArray.length; index++) {
 
-    //             let raceItem = strainRacePosts.map(function (race) {
-    //                 return `<div class="card w-75" style="width: 18rem;">
-    //                             <div class="card-body" class="card text-center">
-    //                                 <h4><b>${race.name}</b></h4>
-    //                                 <h6 class="card-subtitle mb-2 text-muted">${race.id}</h6>
-    //                                 <p class="card-text">${race.race}</p>
-    //                                 <p class="card-text">${race.flavor}</p>
-    //                             </div>
-    //                         </div>`
-    //             })
-    //             console.log(raceItem)
-    //             displayDiv.innerHTML = raceItem.join("")
-    //         })
-    // })
-    //--------------------------------------------------------------------
-    // CODE TO SEARCH DESCRIPTION BY STRAIN ID NUMBER 
-    //--------------------------------------------------------------------
-    // displayDiv.innerHTML = ""
-    // var setupArray = [...Array(2162).keys()].map(x => x+1);
-    // console.log(setupArray)
-    // // var idArray = [setupArray]
-    // // console.log(idArray);
-    // for (let index = 0; index < setupArray.length; index++) {
+//     fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/data/desc/" + [index].values
+//     .then(response => response.json())
+//     .then(descPosts => {            
+//         console.log(descPosts)
+//         const descItem = Object.values(descPosts)
+//         // let descItem = setupArray[index]
+//         console.log(descItem)
 
-    //     fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/data/desc/" + [index].values
-    //     .then(response => response.json())
-    //     .then(descPosts => {            
-    //         console.log(descPosts)
-    //         const descItem = Object.values(descPosts)
-    //         // let descItem = setupArray[index]
-    //         console.log(descItem)
+//                 let descItems = `<div class="card w-75" style="width: 18rem;">
+//                 <div class="card-body" class="card text-center">
 
-    //                 let descItems = `<div class="card w-75" style="width: 18rem;">
-    //                 <div class="card-body" class="card text-center">
+//                     <h6>${Oject.values(descItem)}</h6>
+//                 </div>
+//             </div>`
 
-    //                     <h6>${Oject.values(descItem)}</h6>
-    //                 </div>
-    //             </div>`
+//             displayDiv.innerHTML = descItems
 
-    //             displayDiv.innerHTML = descItems
+//             })
+//             // console.log(descItems)
 
-    //             })
-    //             // console.log(descItems)
-
-    //         }
-    descButton.addEventListener("click", function () {
-        let descURL = `http://strainapi.evanbusse.com/0d4ocxj/strains/data/desc/${idTextBox.value}`
-        fetch(descURL)
-            .then(response => response.json())
-            .then(descPosts => {
-                console.log(descPosts)
-                let descVar = `<div class="card w-75" style="width: 18rem;">
+//         }
+descButton.addEventListener("click", function () {
+    let descURL = `http://strainapi.evanbusse.com/0d4ocxj/strains/data/desc/${idTextBox.value}`
+    fetch(descURL)
+        .then(response => response.json())
+        .then(descPosts => {
+            console.log(descPosts)
+            let descVar = `<div class="card w-75" style="width: 18rem;">
                             <div class="card-body" class="card text-center">
                                 <h6 class="card-subtitle mb-2 text-muted">${idTextBox.value}</h6>
                                 <h6>${descPosts.desc}</h6>
                             </div>
                         </div>`
-                displayDiv.innerHTML = descVar
-            })
-    })
+            displayDiv.innerHTML = descVar
+        })
+})
 
 //--------------------------------------------------------------------
 // API ADDRESSES FOR REFERENCE 
