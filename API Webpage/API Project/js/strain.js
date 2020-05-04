@@ -52,6 +52,12 @@ allButtonBody.addEventListener("click", function () {
 })
 
 //--------------------------------------------------------------------
+// CODE FOR STRAIN SELECTOR BY RACE
+//--------------------------------------------------------------------
+// fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/race/RACE")
+
+
+//--------------------------------------------------------------------
 // CODE FOR STRAIN SELECTOR BY EFFECT 
 //--------------------------------------------------------------------
 // function effectOptions() {
@@ -185,6 +191,34 @@ searchFlavorButton.addEventListener("click", function () {
 //--------------------------------------------------------------------
 // CODE TO SEARCH DESCRIPTION BY STRAIN ID NUMBER 
 //--------------------------------------------------------------------
+// displayDiv.innerHTML = ""
+// var setupArray = [...Array(2162).keys()].map(x => x+1);
+// console.log(setupArray)
+// // var idArray = [setupArray]
+// // console.log(idArray);
+// for (let index = 0; index < setupArray.length; index++) {
+  
+//     fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/data/desc/" + [index].values
+//     .then(response => response.json())
+//     .then(descPosts => {            
+//         console.log(descPosts)
+//         const descItem = Object.values(descPosts)
+//         // let descItem = setupArray[index]
+//         console.log(descItem)
+        
+//                 let descItems = `<div class="card w-75" style="width: 18rem;">
+//                 <div class="card-body" class="card text-center">
+                    
+//                     <h6>${Oject.values(descItem)}</h6>
+//                 </div>
+//             </div>`
+            
+//             displayDiv.innerHTML = descItems
+            
+//             })
+//             // console.log(descItems)
+            
+//         }
 descButton.addEventListener("click", function () {
     let descURL = `http://strainapi.evanbusse.com/0d4ocxj/strains/data/desc/${idTextBox.value}`
     fetch(descURL)
