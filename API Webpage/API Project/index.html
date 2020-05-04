@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+  
+
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,12 +11,13 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel='"stylesheet"' href="css/styles.css" />
+  <link rel="stylesheet" href="css/styles.css" />
   <title>Cannabis Strain App Website</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <nav id='navBar' class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="http://cannabis-strain-app.surge.sh/display-all-strains">Cannabis Strain App</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,17 +50,70 @@
   <!-- <img src="images/cannabis-header.jpg" class="img-fluid" alt="Responsive image"> -->
   <!-- <h1>Cannabis Strain App</h1> -->
   <p></p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+
+
+
+  <div id='divContainer'>
+<!-- ------------------ ALL STRAINS ---------------------------- -->
+  <div class='containerCell'>
   <h3>All Cannabis Strain Information</h3>
   <label>Press the this button to display the entire list of all cannabis strains including the strain name, strain
     type, strain identification number(ID), strain flavors, and strain effects:</label>
   <button id="allButtonBody">All Strains</button>
+  </div>
   <p></p>
-  <h3>Filter Cannabis Strains by Effects</h3>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+
+<!-- ------------------ FLAVA ---------------------------- -->
+
+<div class='containerCell'>
+  <h3>Filter Cannabis Strains by Flavor</h3>
+  <p>Each cannabis strain has a unique flavor profile.</p>
+  <label>Use the selector to filter cannabis strains by flavor:</label>
+
+  <select id="flavorSelector">
+
+  </select>
+  <button id="searchFlavorButton" onclick="flavorOptions()">Search</button>
+  </div>
+
+  </div>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+
+
+<!-- ------------------ EFFECTS ---------------------------- -->
+
+<div id='effectContainer'>
+
+<div id='effectInfo'>
+<h3>Cannabis Strains by Effects</h3>
   <p>Cannabis can be used for recreationally and/or to help treat medical conditions. Cannabis has positive effects and
     some negative side effects as well.</p>
-  <label>Use the selector to filter cannabis strains by either positive effects, medical
+  <label>Use the selectors to filter cannabis strains by either positive effects, medical
     conditions, or negative side effects:</label>
   <p></p>
+</div>
+
+<!-- -------------------------- Effect Divs ------------------- -->
+
+
+<div id='effectSearchContainer'>
+  
+
+
+<!--                DESIRED                    -->
+
+  <div class='effectContainerCell'>
+    <h4>Positive Effects</h4>
+    <p>Cannabis has been proven to have many positive effects, choose from the options below to view strains by positive effects.</p>
 
   <select id="effectSelectorPositive">
     <option name="pos" value="Relaxed">Relaxed</option>
@@ -75,11 +131,21 @@
     <option name="pos" value="Aroused">Aroused</option>
   </select>
 
-    <button class="desiredEffect" id="searchPositiveEffectButton" onclick="PosEffects()">Search by Desired Effects</button>
   
-  <p></p>
 
-  <select id="effectSelectorMedical">
+
+    <button class="desiredEffect" id="searchPositiveEffectButton" onclick="PosEffects()">Search by Desired Effects</button>
+  </div>
+
+  
+
+<!--                MEDICAL                    -->
+
+  <div class='effectContainerCell'>
+    <h4>Medical Treatments</h4>
+    <p>Cannabis has been proven to have many positive effects, choose from the options below to view strains by positive effects.</p>
+
+    <select id="effectSelectorMedical">
     <option name="med" value="Depression">Depression</option>
     <option name="med" value="Insomnia">Insomnia</option>
     <option name="med" value="Pain">Pain</option>
@@ -97,7 +163,14 @@
     <option name="med" value="Muscle Spasms">Muscle Spasms</option>
   </select>
   <button class="medicalEffect" id="searchMedicalEffectButton" onclick="MedEffects()">Search by Medical Issues</button>
+  </div>
   <p></p>
+
+<!--                NEGATIVE                    -->
+
+<div class='effectContainerCell'>
+<h4>Negative Effects</h4>
+  <p>Nothing is perfect. Some people may experience adverse effects when using marijuana. Be mindful of negative effects that may embody certain strains.</p>
 
   <select id="effectSelectorNegative">
     <option name="neg" value="Dizzy">Dizzy</option>
@@ -107,21 +180,31 @@
     <option name="neg" value="Anxious">Anxious</option>
   </select>
   <button class="negativeEffect" id="searchNegativeEffectButton" onclick="NegEffects()">Search by Effects to Avoid</button>
-  <p></p>
+</div>
 
-  <h3>Filter Cannabis Strains by Flavor</h3>
-  <p>Each cannabis strain has a unique flavor profile.</p>
-  <label>Use the selector to filter cannabis strains by flavor:</label>
+</div>
 
-  <select id="flavorSelector">
+</div>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-  </select>
-  <button id="searchFlavorButton" onclick="flavorOptions()">Search</button>
+
+
+
+
+
+
+<!-- ------------------ DESCRIPTION ---------------------------- -->
+
+  </div>
   <p></p>
   <h3>View Cannabis Strain Descriptions</h3>
   <label for="idTextBox">Type in a cannabis strain ID number to view a description of the strain:</label>
   <input id="idTextBox" type="text" placeholder="Enter Strain ID Number" required />
   <button id="descButton">Display Strain Description</button>
+
+
+<!-- ------------------ INFO DISPLAY ---------------------------- -->
+
   <div id="displayDiv"></div>
   <p></p>
   <!-- <div class="font" id="displayDiv"></div> -->
