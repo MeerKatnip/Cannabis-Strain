@@ -5,11 +5,12 @@ let allButtonBody = document.getElementById("allButtonBody")
 // let effectSelector = document.getElementById("effectSelector")
 // let searchEffectButton = document.getElementById("searchEffectButton")
 let searchPositiveEffectButton = document.getElementById("searchPositiveEffectButton")
-let searchMedicalEffectButton  = document.getElementById("searchMedicalEffectButton")
-let searchNegativeEffectButton  = document.getElementById("searchNegativeEffectButton")
+let searchMedicalEffectButton = document.getElementById("searchMedicalEffectButton")
+let searchNegativeEffectButton = document.getElementById("searchNegativeEffectButton")
 // let flavorSelector = document.getElementById("flavorSelector")
 let searchFlavorButton = document.getElementById("searchFlavorButton")
 let displayDiv = document.getElementById("displayDiv")
+let strainRaceSelector = document.getElementById("strainRaceSelector")
 //--------------------------------------------------------------------
 // CODE FOR ALL STRAINS API 
 //--------------------------------------------------------------------
@@ -48,13 +49,9 @@ allButtonBody.addEventListener("click", function () {
         .then(response => response.json())
         .then(strainPosts => {
             renderPosts(strainPosts)
-    })
+        })
 })
 
-//--------------------------------------------------------------------
-// CODE FOR STRAIN SELECTOR BY RACE
-//--------------------------------------------------------------------
-// fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/race/RACE")
 
 
 //--------------------------------------------------------------------
@@ -73,7 +70,7 @@ allButtonBody.addEventListener("click", function () {
 // }
 
 // searchPositiveEffectButton.addEventListener("click", function () {
-function PosEffects() { 
+function PosEffects() {
     var e = document.getElementById("effectSelectorPositive").selectedIndex;
     console.log(e)
     var posSelection = document.getElementsByName("pos")[e].value;
@@ -97,7 +94,7 @@ function PosEffects() {
 }
 
 // searchMedicalEffectButton.addEventListener("click", function () {
-function MedEffects() { 
+function MedEffects() {
     var e = document.getElementById("effectSelectorMedical").selectedIndex;
     console.log(e)
     var medSelection = document.getElementsByName("med")[e].value;
@@ -121,7 +118,7 @@ function MedEffects() {
 }
 
 // searchNegativeEffectButton.addEventListener("click", function () {
-function NegEffects() {    
+function NegEffects() {
     var e = document.getElementById("effectSelectorNegative").selectedIndex;
     console.log(e)
     var negSelection = document.getElementsByName("neg")[e].value;
@@ -140,9 +137,10 @@ function NegEffects() {
                 </div>
             </div>`
             })
-            displayDiv.innerHTML = effectItem.join("")})
-        }
-    
+            displayDiv.innerHTML = effectItem.join("")
+        })
+}
+
 
 //--------------------------------------------------------------------
 // CODE FOR STRAIN SELECTOR BY FLAVOR
@@ -188,6 +186,74 @@ searchFlavorButton.addEventListener("click", function () {
         })
 })
 
+
+//--------------------------------------------------------------------
+// CODE FOR STRAIN SELECTOR BY TYPE
+//--------------------------------------------------------------------
+
+
+
+// sativa button
+sativaButtonBody.addEventListener("click", function () {
+    fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/race/sativa")
+        .then(response => response.json())
+        .then(typeClasses => {
+            let typeItem = typeClasses.map(function (type) {
+                return `<div class="card w-75" style="width: 18rem;">
+                <div class="card-body" class="card text-center">
+                <h4><b>${type.name}</b></h4>
+                <h6 class="card-subtitle mb-2 text-muted">${type.id}</h6>
+                <p id="descList" class="card-text"></p>
+                <p class="card-text"><b>Race: </b>${type.race}</p>
+                </div>
+            </div>`
+            })
+            displayDiv.innerHTML = typeItem.join("")
+        })
+})
+
+// indica button
+indicaButtonBody.addEventListener("click", function () {
+    fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/race/indica")
+        .then(response => response.json())
+        .then(typeClasses => {
+            let typeItem = typeClasses.map(function (type) {
+                return `<div class="card w-75" style="width: 18rem;">
+                <div class="card-body" class="card text-center">
+                <h4><b>${type.name}</b></h4>
+                <h6 class="card-subtitle mb-2 text-muted">${type.id}</h6>
+                <p id="descList" class="card-text"></p>
+                <p class="card-text"><b>Race: </b>${type.race}</p>
+                </div>
+            </div>`
+            })
+            displayDiv.innerHTML = typeItem.join("")
+        })
+})
+
+// hybrid button
+hybridButtonBody.addEventListener("click", function () {
+    fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/race/hybrid")
+        .then(response => response.json())
+        .then(typeClasses => {
+            let typeItem = typeClasses.map(function (type) {
+                return `<div class="card w-75" style="width: 18rem;">
+                <div class="card-body" class="card text-center">
+                <h4><b>${type.name}</b></h4>
+                <h6 class="card-subtitle mb-2 text-muted">${type.id}</h6>
+                <p id="descList" class="card-text"></p>
+                <p class="card-text"><b>Race: </b>${type.race}</p>
+                </div>
+            </div>`
+            })
+            displayDiv.innerHTML = typeItem.join("")
+        })
+})
+
+
+// fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/race/RACE")
+
+
 //--------------------------------------------------------------------
 // CODE TO SEARCH DESCRIPTION BY STRAIN ID NUMBER 
 //--------------------------------------------------------------------
@@ -197,7 +263,7 @@ searchFlavorButton.addEventListener("click", function () {
 // // var idArray = [setupArray]
 // // console.log(idArray);
 // for (let index = 0; index < setupArray.length; index++) {
-  
+
 //     fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/data/desc/" + [index].values
 //     .then(response => response.json())
 //     .then(descPosts => {            
@@ -205,19 +271,19 @@ searchFlavorButton.addEventListener("click", function () {
 //         const descItem = Object.values(descPosts)
 //         // let descItem = setupArray[index]
 //         console.log(descItem)
-        
+
 //                 let descItems = `<div class="card w-75" style="width: 18rem;">
 //                 <div class="card-body" class="card text-center">
-                    
+
 //                     <h6>${Oject.values(descItem)}</h6>
 //                 </div>
 //             </div>`
-            
+
 //             displayDiv.innerHTML = descItems
-            
+
 //             })
 //             // console.log(descItems)
-            
+
 //         }
 descButton.addEventListener("click", function () {
     let descURL = `http://strainapi.evanbusse.com/0d4ocxj/strains/data/desc/${idTextBox.value}`
@@ -234,6 +300,7 @@ descButton.addEventListener("click", function () {
             displayDiv.innerHTML = descVar
         })
 })
+
 //--------------------------------------------------------------------
 // API ADDRESSES FOR REFERENCE 
 // BOLD letters at the end of API address must have an input value 
@@ -388,3 +455,4 @@ descButton.addEventListener("click", function () {
 
 //     descItems ===`<p>${effectPosts.desc}</p>`
 // })
+
