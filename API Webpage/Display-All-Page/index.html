@@ -9,7 +9,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel='"stylesheet"' href="css/styles.css" />
+  <!-- <link rel="stylesheet" href="css/styles.css" /> -->
   <title>Cannabis Strain App Website</title>
 </head>
 
@@ -24,7 +24,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" role="button" href="">Home<span class="sr-only">(current)</span></a>
+          <a class="nav-link" role="button" href="http://cannabis-strain-app.surge.sh">Home<span class="sr-only">(current)</span></a>
         </li>
         <!-- <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
@@ -46,7 +46,7 @@
   </nav>
   <!-- <img src="images/cannabis-header.jpg" class="img-fluid" alt="Responsive image"> -->
   <!-- <h1>Cannabis Strain App</h1> -->
-  <p></p>
+  <!-- <p></p>
   <h3>All Cannabis Strain Information</h3>
   <label>Press the this button to display the entire list of all cannabis strains including the strain name, strain
     type, strain identification number(ID), strain flavors, and strain effects:</label>
@@ -117,12 +117,22 @@
 
   </select>
   <button id="searchFlavorButton" onclick="flavorOptions()">Search</button>
-  <p></p>
+  <p></p> -->
+
   <h3>View Cannabis Strain Descriptions</h3>
   <label for="idTextBox">Type in a cannabis strain ID number to view a description of the strain:</label>
   <input id="idTextBox" type="text" placeholder="Enter Strain ID Number" required />
   <button id="descButton">Display Strain Description</button>
+  <p></p>
+
+  <h3>View Cannabis Strain by Name</h3>
+  <label for="nameTextBox">Type in a cannabis strain name to view a description of the strain:</label>
+  <input id="nameTextBox" type="text" placeholder="Enter Strain Name" required />
+  <button id="nameButton">Display Strain Information</button>
+  <p></p>
+
   <div id="displayDiv"></div>
+  
   <p></p>
   <!-- <div class="font" id="displayDiv"></div> -->
   <!-- Optional JavaScript -->
@@ -137,7 +147,7 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
 
-  <script src="js/strain.js"></script>
+  <script src="js/display-all.js"></script>
 </body>
 
 </html>

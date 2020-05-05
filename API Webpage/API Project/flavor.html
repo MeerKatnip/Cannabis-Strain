@@ -15,7 +15,7 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="home.html">Cannabis App</a>
+    <a class="navbar-brand" href="">Cannabis Strain App</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -23,10 +23,12 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <!-- <li class="nav-item active">
-          <a class="nav-link" role="button" href="home.html">Home<span class="sr-only">(current)</span></a>
+        <li class="nav-item active">
+          <a class="nav-link" role="button" href="index.html">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
         </li> -->
-        
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">View </a>
@@ -34,28 +36,22 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a href="type.html"><button  class="dropdown-item">Strain Type</button></a> 
             <a href="effect.html"><button  class="dropdown-item">Strain Effects</button></a>
-            <a href="flavor.html"></ahref> <button  class="dropdown-item">Strain Flavors</button></a>
+            <a href="flavor.html"></a> <button  class="dropdown-item">Strain Flavors</button></a>
             <a> <div class="dropdown-divider"></div></a>
             <a href="all-strains.html"> <button class="dropdown-item" >All Strains</button></a>
           </div>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="aboutus.html">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contactus.html">Contact Us</a>
-        </li>
       </ul>
     </div>
   </nav>
-  <img src="images/cannabis-header.jpg" class="img-fluid" alt="Responsive image">
+  <!-- <img src="images/cannabis-header.jpg" class="img-fluid" alt="Responsive image"> -->
   <!-- <h1>Cannabis Strain App</h1> -->
   <p></p>
-  <!-- <h3>All Cannabis Strain Information</h3>
+  <h3>All Cannabis Strain Information</h3>
   <label>Press the this button to display the entire list of all cannabis strains including the strain name, strain
     type, strain identification number(ID), strain flavors, and strain effects:</label>
-  <button id="allButtonBody">All Strains</button>
-  <p></p> -->
+  <button id="allButtonBodyFlavor">All Strains</button>
+  <p></p>
   <!-- <h3>Filter Cannabis Strains by Effects</h3>
   <p>Cannabis can be used for recreationally and/or to help treat medical conditions. Cannabis has positive effects and
     some negative side effects as well.</p>
@@ -111,7 +107,7 @@
     <option name="neg" value="Anxious">Anxious</option>
   </select>
   <button class="negativeEffect" id="searchNegativeEffectButton" onclick="NegEffects()">Search by Effects to Avoid</button>
-  <p></p>
+  <p></p> -->
 
   <h3>Filter Cannabis Strains by Flavor</h3>
   <p>Each cannabis strain has a unique flavor profile.</p>
@@ -122,17 +118,12 @@
   </select>
   <button id="searchFlavorButton" onclick="flavorOptions()">Search</button>
   <p></p>
-  <h3>View Cannabis Strain Descriptions</h3>
+  <!-- <h3>View Cannabis Strain Descriptions</h3>
   <label for="idTextBox">Type in a cannabis strain ID number to view a description of the strain:</label>
   <input id="idTextBox" type="text" placeholder="Enter Strain ID Number" required />
   <button id="descButton">Display Strain Description</button> -->
-  <div id="displayDiv"></div>
+  <div id="displayDivFlavor"></div>
   <p></p>
-
-  <!-- <div class="spinner-border text-success" role="status">
-    <span class="sr-only">Loading...</span>
-  </div> -->
-
   <!-- <div class="font" id="displayDiv"></div> -->
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -145,12 +136,12 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
-
-  <script src="js/strain.js"></script>
-  <!-- <script src="js/all-strain.js"></script>
-  <script src="js/race.js"></script>
-  <script src="js/effect.js"></script>
-  <script src="js/flavor.js"></script> -->
+<!-- 
+    <script src="js/strain.js"></script>
+    <script src="js/display-all.js"></script>
+    <script src="js/race.js"></script>
+    <script src="js/effect.js"></script> -->
+    <script src="js/flavor.js"></script>
 </body>
 
 </html>
