@@ -71,6 +71,18 @@ body {
 #navBar {
     background: rgb(22, 221, 22);
 }
+
+.carousel-inner {
+    height: auto;
+    width: auto;
+}
+
+.d-block {
+    height: 400px;
+    max-width: 100%;
+    object-fit: cover;
+}
+
 /* div {
  display: flexbox; 
 } */
