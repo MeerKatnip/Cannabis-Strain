@@ -37,7 +37,7 @@ function renderPosts(strainPosts) {
     displayDiv.innerHTML = strainItems
 }
 
-allButtonMenu.addEventListener("click", function () {
+allButtonBody.addEventListener("click", function () {
     fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/all")
         .then(response => response.json())
         .then(strainPosts => {
