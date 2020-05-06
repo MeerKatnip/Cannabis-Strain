@@ -1,0 +1,33 @@
+
+column {
+  column-count: auto;
+}
+header  {
+  background-color: green
+  text-align center;
+  padding:20px
+
+}
+
+body {
+  background-color: white ;
+  text-align: center;
+
+
+}
+img {
+  border-radius: 60%;
+}
+
+
+
+
+
+
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
