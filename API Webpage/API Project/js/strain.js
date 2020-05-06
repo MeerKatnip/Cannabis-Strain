@@ -21,7 +21,7 @@ function renderPosts(strainPosts) {
         const strainItem = Object.values(strainPosts)[index]
         strainItems += `
         <div class="cardTest" style="width: 30%;">
-            <div class="card-body" class="card text-center">
+            <div class="cardBody" class="card text-center">
                 <h4><b>${Object.keys(strainPosts)[index]}</b></h4>
                 <h6 class="card-subtitle mb-2 text-muted">${strainItem.race}</h6>
                 <p id="descList" class="card-text"></p>
@@ -37,7 +37,7 @@ function renderPosts(strainPosts) {
     displayDiv.innerHTML = strainItems
 }
 
-allButtonMenu.addEventListener("click", function () {
+allButtonBody.addEventListener("click", function () {
     fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/all")
         .then(response => response.json())
         .then(strainPosts => {
