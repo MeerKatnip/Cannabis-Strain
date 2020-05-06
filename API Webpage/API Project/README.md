@@ -23,7 +23,7 @@
 - [David Carlisle](@dbc257)
 - [LaKendra Farris](@Lakendrafarris)
 - [Rickelle Tackitt](@RickelleDawn)
-- [Amy Roy](@MeerKatnip)
+- [Amy Roy](github.com)
 
 ### Database
 
