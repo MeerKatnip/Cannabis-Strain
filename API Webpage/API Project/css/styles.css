@@ -28,11 +28,12 @@
 }
 
 #effectContainer {
-    border: 3px solid green;
+    border: 3px solid #003500;
     border-radius: 5px;
     margin: 10px;
     padding: 15px;
-    background-color: black;
+    color: white;
+    background-color: #272727;
 
 }
 
@@ -64,7 +65,16 @@
 
 }
 
+#strainInfo {
+    border: 3px solid #003500;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+    color: white;
+    background-color: #272727;
+    text-align: center;
 
+}
 
 body {
     background-color: black;
@@ -89,10 +99,17 @@ body {
 .cardTest{
     background: rgba(235, 255, 235, .7);
     margin: 10px;
+    border-radius: 5px;
+
 }
 
-.card-body {
-    margin: 10px
+.cardBody {
+    margin: 10px;
+    color: black;
+    text-align: center;
+    overflow-wrap: break-word;
+
+
 
 }
 

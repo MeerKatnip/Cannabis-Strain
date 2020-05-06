@@ -21,7 +21,7 @@ function renderPosts(strainPosts) {
         const strainItem = Object.values(strainPosts)[index]
         strainItems += `
         <div class="cardTest" style="width: 30%;">
-            <div class="card-body" class="card text-center">
+            <div class="cardBody" class="card text-center">
                 <h4><b>${Object.keys(strainPosts)[index]}</b></h4>
                 <h6 class="card-subtitle mb-2 text-muted">${strainItem.race}</h6>
                 <p id="descList" class="card-text"></p>
