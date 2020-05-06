@@ -7,12 +7,15 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-block: 4px;
     padding: 2px;
-    background-color: white;
+    background-color: black;
 
 }
 
+ #weedLeaf {
+     width: 95%;
+
+ } 
 .containerCell {
     width: 33%;
     float: left;
@@ -20,9 +23,8 @@
     margin: 3px;
     border-radius: 5px;
     border: 3px solid green;
-    background: rgb(235, 255, 235);
+    background: rgba(235, 255, 235, 0.7);
     color: black;
-
 }
 
 #effectContainer {
@@ -30,12 +32,14 @@
     border-radius: 5px;
     margin: 10px;
     padding: 15px;
+    background-color: black;
 
 }
 
 #effectInfo {
     flex-wrap: wrap;
     padding: 15px;
+    text-align: center;
 }
 
 #effectSearchContainer {
@@ -55,7 +59,7 @@
     margin: 3px;
     border-radius: 5px;
     border: 3px solid green;
-    background: rgb(235, 255, 235);
+    background: rgba(235, 255, 235, 0.7);
     color: black;
 
 }
@@ -63,12 +67,12 @@
 
 
 body {
-    background-color: white;
+    background-color: black;
     color: black;
 }
 
 #navBar {
-    background: rgb(22, 221, 22);
+    background: forestgreen;
 }
 
 .carousel-inner {
@@ -80,6 +84,23 @@ body {
     height: 400px;
     max-width: 100%;
     object-fit: cover;
+}
+
+.cardTest{
+    background: rgba(235, 255, 235, .7);
+    margin: 10px;
+}
+
+.card-body {
+    margin: 10px
+
+}
+
+#displayDiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 /* div {
