@@ -145,46 +145,46 @@ function NegEffects() {
 //--------------------------------------------------------------------
 // CODE FOR STRAIN SELECTOR BY FLAVOR
 //--------------------------------------------------------------------
-function flavorOptions() {
-    fetch("http://strainapi.evanbusse.com/0d4ocxj/searchdata/flavors")
-        .then(response => response.json())
-        .then(flavorPosts => {
-            // flavorSelector.innerHTML = ""
-            let flavorItem = flavorPosts.map(function (flavor) {
-                return `<select>
-            <option name="flav" value="${flavor}">${flavor}</option>`
-            })
-            flavorSelector.innerHTML = flavorItem
-        })
-}
+// function flavorOptions() {
+//     fetch("http://strainapi.evanbusse.com/0d4ocxj/searchdata/flavors")
+//         .then(response => response.json())
+//         .then(flavorPosts => {
+//             // flavorSelector.innerHTML = ""
+//             let flavorItem = flavorPosts.map(function (flavor) {
+//                 return `<select>
+//             <option name="flav" value="${flavor}">${flavor}</option>`
+//             })
+//             flavorSelector.innerHTML = flavorItem
+//         })
+// }
 
-flavorOptions()
+// flavorOptions()
 
-searchFlavorButton.addEventListener("click", function () {
-    // displayDiv.innerHTML = ""
-    var f = document.getElementById("flavorSelector").selectedIndex;
-    console.log(f)
-    var flavorSelection = document.getElementsByName("flav")[f].value;
-    console.log(flavorSelection)
-    let flavorURL = `http://strainapi.evanbusse.com/0d4ocxj/strains/search/flavor/${flavorSelection}`
-    fetch(flavorURL)
-        .then(response => response.json())
-        .then(flavorPosts => {
+// searchFlavorButton.addEventListener("click", function () {
+//     // displayDiv.innerHTML = ""
+//     var f = document.getElementById("flavorSelector").selectedIndex;
+//     console.log(f)
+//     var flavorSelection = document.getElementsByName("flav")[f].value;
+//     console.log(flavorSelection)
+//     let flavorURL = `http://strainapi.evanbusse.com/0d4ocxj/strains/search/flavor/${flavorSelection}`
+//     fetch(flavorURL)
+//         .then(response => response.json())
+//         .then(flavorPosts => {
 
-            let flavorItem = flavorPosts.map(function (flavor) {
-                return `<div class="card w-75" style="width: 18rem;">
-                            <div class="card-body" class="card text-center">
-                                <h4><b>${flavor.name}</b></h4>
-                                <h6 class="card-subtitle mb-2 text-muted">${flavor.id}</h6>
-                                <p class="card-text">${flavor.race}</p>
-                                <p class="card-text">${flavor.flavor}</p>
-                            </div>
-                        </div>`
-            })
-            console.log(flavorItem)
-            displayDiv.innerHTML = flavorItem.join("")
-        })
-})
+//             let flavorItem = flavorPosts.map(function (flavor) {
+//                 return `<div class="card w-75" style="width: 18rem;">
+//                             <div class="card-body" class="card text-center">
+//                                 <h4><b>${flavor.name}</b></h4>
+//                                 <h6 class="card-subtitle mb-2 text-muted">${flavor.id}</h6>
+//                                 <p class="card-text">${flavor.race}</p>
+//                                 <p class="card-text">${flavor.flavor}</p>
+//                             </div>
+//                         </div>`
+//             })
+//             console.log(flavorItem)
+//             displayDiv.innerHTML = flavorItem.join("")
+//         })
+// })
 
 
 //--------------------------------------------------------------------
@@ -321,138 +321,6 @@ descButton.addEventListener("click", function () {
 
 // http://strainapi.evanbusse.com/0d4ocxj/strains/search/race/RACE
 // http://strainapi.evanbusse.com/0d4ocxj/strains/data/desc/STRAIN_ID
+// http://strainapi.evanbusse.com/0d4ocxj/strains/search/name/NAME
 
-
-
-//--------------------------------------------------------------------
-// CODE THAT DIDN'T WORK; 
-// I'M LEAVING IT UNTIL THE PROJECT IS COMPLETE LEFT. 
-// IT WILL MOST LIKELY BE DELETED.
-//--------------------------------------------------------------------
-
-// let filteredPosts = postsCache.filter((post) => {
-//     let postValues = Object.values(post)
-//     let postKeys = Object.keys(post)
-//     let properties = postValues.concat(postKeys)
-//     let passFilter = false 
-//     properties.map((prop) => {
-//         if(prop.toString().toLowerCase().includes(userInput)) {
-//             passFilter = true
-//         }
-//     }) 
-//     if(passFilter === true) {
-//         return post
-//     }
-// })
-// console.log(filteredPosts)
-// renderPosts(filteredPosts)
-// console.log(e.target.value)
-
-
-// let sativaButton = document.getElementById("sativaButton")
-// let hydridButton = document.getElementById("hydridButton")
-// let indicaButton = document.getElementById("indicaButton")
-// let searchInput = document.getElementById("searchInput")
-// let postsCache = []
-// function fetchAll(){
-//     fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/all")
-//     .then(response => response.json())
-//     .then(strainPosts => {
-//     postsCache = strainPosts
-//         renderPosts(strainPosts)
-//     })
-// }
-// fetchAll()
-
-// searchInput.addEventListener("change",(e) => {
-//     let userInput = e.target.value.toLowerCase()
-//     console.log(postsCache)
-// }) 
-
-// let hungryEffect = document.getElementById("hungryEffect")
-
-// hungryEffect.addEventListener("click", function () {
-
-//     fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/effect/EFFECT")
-//         .then(response => response.json())
-//         .then(strainPosts => {
-//             // console.log(strainPosts)
-//             let filteredEffects = strainPosts.filter(strain => strain.effect === "Hungry")
-//             // console.log(strainPosts)
-//             let strainItem = filteredEffects.map(function (strain) {
-//                 return `<div class="card w-75" style="width: 18rem;">
-//                         <div class="card-body" class="card text-center">
-//                             <h4><b>${strain.name}</b></h4>
-//                             <h6 class="card-subtitle mb-2 text-muted">${strain.race}</h6>
-//                             <p class="card-text"><b>Positive Effects: </b>${strain.effect}</p>
-
-//                         </div>
-//                     </div>`
-//             })
-
-//             strainList.innerHTML = strainItem.join("")
-//         })
-// })
-// let relaxedEffect = document.getElementById("relaxedEffect")
-
-// relaxedEffect.addEventListener("click", function () {
-//     fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/effect/EFFECT")
-//         .then(response => response.json())
-//         .then(strainPosts => {
-//             let filteredEffects = strainPosts.filter(strain => strain.effect === "Relaxed")
-//             // console.log(strainPosts)
-//             let strainItem = filteredEffects.map(function (strain) {
-//                 return `<div class="card w-75" style="width: 18rem;">
-//                         <div class="card-body" class="card text-center">
-//                         <h4><b>${strain.name}</b></h4>
-//                 <h6 class="card-subtitle mb-2 text-muted">${strain.race}</h6>
-//                 <p class="card-text"><b>Positive Effects: </b>${strain.effect}</p>
-
-//             </div>
-//         </div>`
-//             })
-
-//             strainList.innerHTML = strainItem.join("")
-//         })
-// })
-
-// function myFunction() {
-//     var x = document.getElementById("mySelect").selectedIndex;
-//     alert(document.getElementsByTagName("option")[x].value);
-// 
-
-// function renderDesc() {
-    // let i = document.getElementById("descDisplay").selectedIndex;
-    // let descList = document.getElementsByTagName("label").value;
-
-    // fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/all")
-    // .then(response => response.json())
-    // .then(strainPosts => {
-    // for (let index = 0; index < Object.values(strainPosts).length; index++) 
-
-    //     // console.log(descI)
-    // descURL = `http://strainapi.evanbusse.com/0d4ocxj/strains/data/desc/${Object.values(strainPosts)[index].id}`
-    // fetch(descURL) 
-    // .then(response => response.json())
-    // .then(idPost => {
-    // console.log(idPost)
-    //     for (let index = 0; index < Object.values(idPost).length; index++) 
-
-    // let descI = Object.values(idPost)[index]
-    // let dItems = ""
-    // dItems += `<label>${descI.desc}<label>`
-    // })  
-    // descDisplay.innerHTML = dItems
-    // })
-// })
-// renderDesc()
-// fetch(`http://strainapi.evanbusse.com/0d4ocxj/strains/data/desc/STRAIN_ID`)
-
-// let descItems = ""
-// for (let index = 0; index < Object.values(strainPosts).length; index++) {
-//     let descItem = Object.values(strainPosts)[index]
-//     console.log(descItem)
-
-//     descItems ===`<p>${effectPosts.desc}</p>`
-// })
 
