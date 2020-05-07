@@ -5,9 +5,18 @@
 #title {
   background-color: #272727;
   text-align: center;
-  padding: 20px;
-}
+  padding: 3px;
+  margin: 25px;
+  width: 300px;
+  border: solid green;
+  border-radius: 10px;
+  align-self: center;
+  color: white;
 
+}
+#ceo {
+  color: rgba(128, 128, 128, 0.863);
+}
 body {
   background-color: black;
   text-align: center;
