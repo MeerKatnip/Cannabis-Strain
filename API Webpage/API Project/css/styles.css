@@ -127,10 +127,22 @@ body {
     justify-content: center;
 }
 
+.divLink {
+    color: whitesmoke;
+}
+
+a {
+    color: whitesmoke;
+}
+
+a:hover {
+    color: whitesmoke;
+}
+
 /* div {
  display: flexbox; 
 } */
-#cText {
+/* #cText {
     text-decoration-color:blue;
     
-}
+} */
