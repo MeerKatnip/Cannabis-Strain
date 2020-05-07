@@ -6,7 +6,7 @@
 // let searchFlavorButton = document.getElementById("searchFlavorButton")
 // let nameButton = document.getElementById("nameButton")
 let displayDivType = document.getElementById("displayDivType")
-
+let displayTypeGif = document.getElementById("displayTypeGif")
 //--------------------------------------------------------------------
 // CODE FOR STRAIN SELECTOR BY TYPE
 //--------------------------------------------------------------------
@@ -28,6 +28,13 @@ let displayDivType = document.getElementById("displayDivType")
 
 // sativa button
 sativaButtonBody.addEventListener("click", function () {
+    displayTypeGif.innerHTML = `
+    <body>
+    <p></p>
+    <img id="loadingGifType" src="images/marijuana-yin-yang.gif" />
+    <p></p>
+    <h3 style="color: green">Cultivating Strain Information...</h3>
+    </body>`
     fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/race/sativa")
         .then(response => response.json())
         .then(typeClasses => {
@@ -43,12 +50,20 @@ sativaButtonBody.addEventListener("click", function () {
                 </div>
             </div>`
             })
+            displayTypeGif.innerHTML = ""
             displayDivType.innerHTML = typeItem.join("")
         })
 })
 
 // indica button
 indicaButtonBody.addEventListener("click", function () {
+    displayTypeGif.innerHTML = `
+    <body>
+    <p></p>
+    <img id="loadingGifType" src="images/marijuana-yin-yang.gif" />
+    <p></p>
+    <h3 style="color: green">Cultivating Strain Information...</h3>
+    </body>`
     fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/race/indica")
         .then(response => response.json())
         .then(typeClasses => {
@@ -63,12 +78,20 @@ indicaButtonBody.addEventListener("click", function () {
                 </div>
             </div>`
             })
+            displayTypeGif.innerHTML = ""
             displayDivType.innerHTML = typeItem.join("")
         })
 })
 
 // hybrid button
 hybridButtonBody.addEventListener("click", function () {
+    displayTypeGif.innerHTML = `
+    <body>
+    <p></p>
+    <img id="loadingGifType" src="images/marijuana-yin-yang.gif" />
+    <p></p>
+    <h3 style="color: green">Cultivating Strain Information...</h3>
+    </body>`    
     fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/race/hybrid")
         .then(response => response.json())
         .then(typeClasses => {
@@ -83,6 +106,7 @@ hybridButtonBody.addEventListener("click", function () {
                 </div>
             </div>`
             })
+            displayTypeGif.innerHTML = ""
             displayDivType.innerHTML = typeItem.join("")
         })
 })
