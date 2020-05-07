@@ -6,6 +6,7 @@ let flavorSelector = document.getElementById("flavorSelector")
 let searchFlavorButton = document.getElementById("searchFlavorButton")
 // let nameButton = document.getElementById("nameButton")
 let displayDivFlavor = document.getElementById("displayDivFlavor")
+let displayFlavorGif = document.getElementById("displayFlavorGif")
 // let allButtonBodyFlavor = document.getElementById("allButtonBodyFlavor")
 //--------------------------------------------------------------------
 // CODE FOR ALL STRAINS API 
@@ -160,7 +161,13 @@ function flavorOptions() {
 flavorOptions()
 
 searchFlavorButton.addEventListener("click", function () {
-    // displayDiv.innerHTML = ""
+    displayFlavorGif.innerHTML = `
+    <body>
+    <p></p>
+    <img id="loadingGifFlavor" src="images/marijuana-yin-yang.gif" />
+    <p></p>
+    <h3 style="color: green">Cultivating Strain Information...</h3>
+    </body>`
     var f = document.getElementById("flavorSelector").selectedIndex;
     console.log(f)
     var flavorSelection = document.getElementsByName("flav")[f].value;
@@ -182,7 +189,7 @@ searchFlavorButton.addEventListener("click", function () {
                         </div>
                     </div>`
             })
-            console.log(flavorItem)
+            displayFlavorGif.innerHTML = ""
             displayDivFlavor.innerHTML = flavorItem.join("")
         })
 })
