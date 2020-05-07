@@ -79,6 +79,7 @@
 body {
     background-color: black;
     color: black;
+    text-align: center;
 }
 
 #navBar {
@@ -113,13 +114,21 @@ body {
 
 }
 
-#displayDiv {
+#displayDivAllStrain {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+#loadingGif {
+    height: 100px;
+    width: 100px;
+}
+
+#displayGifDiv {
+    align-content: center;
+}
 /* div {
  display: flexbox; 
 } */
