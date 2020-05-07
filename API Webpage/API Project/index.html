@@ -39,7 +39,7 @@
             <a href="effect.html"><button  class="dropdown-item">Strain Effects</button></a>
             <a href="flavor.html"></ahref> <button  class="dropdown-item">Strain Flavors</button></a>
             <a> <div class="dropdown-divider"></div></a>
-            <a href="all-strains.html"> <button class="dropdown-item" >All Strains</button></a>
+            <a href="allstrain.html"> <button class="dropdown-item" >All Strains</button></a>
           </div>
         </li>
         <li class="nav-item">
@@ -121,54 +121,81 @@
 </div>
 
 <!------------------------>
-  <div id='divContainer'>
-<!-- ------------------ ALL STRAINS ---------------------------- -->
-  <div class='containerCell'>
+  
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- <div id='divContainer'>
+<div class='containerCell'>
+ 
+
+
+</div>
+</div> -->
+<!-- ------------------ STRAIN TYPE INFORMATION ---------------------------- -->
+
+  <div id='divContainer' class='containerCell'>
+
+  <h3>Cannabis Strain Type Information</h3>
+  <p>The three basic genetic types of cannabis are sativa, hydrid, and indica. Sativa genetics usually originate from hot and humid climates where the plant can grow up to 12 feet tall. The leaves are usually long and skinny. Sativa effects are usually mentally stimulating rather than having a body effect. Sativa effects increase energy and focus, but are not appropriate for anxiety as that can be a negative side effect of this type. 
+  Indica genetics usually come from locations that have a cool and dry climate where the plant is usually short and bushy. A typical indica won't grow more than about 5 feet tall. The leaves are known to be thicker and shorter than sativa types. Indica effects are usually sedating and relaxing with more of a body effect rather mentally stimulating. Indica effects help to treat anxiety, chronic pain, inflammation, and insomnia.cardBody
+  Hybrid genetics are simply a mixture of both types of plant genetics. They usually thrive in moderate weather, and their growth height depends on their genetic makeup. Some hybrid strains lean more towards sativa effects with some indica effects to balance the experience. Other hybrid strains will have more indica genetics with only some sativa characteristics. Cannabis plants can be either male or female with some hermaphrodites. 
+  That is why breeders of cannabis strains can pick and choose which kind of genetics to breed together in order to get the desired effect and/or flavor that they are attempting to create. 
+ </p>
+  
+  <!-- <br>
+  <button id="sativaButtonBody">Sativa</button>
+  <button id="indicaButtonBody">Indica</button>
+  <button id="hybridButtonBody">Hybrid</button>
+  <p></p> -->
+
+</div>
+
+
+<!-- ------------------ EFFECTS ---------------------------- -->
+
+  <div id='divContainer' class='containerCell'>
+<h3>Cannabis Strains by Effects</h3>
+<p>Cannabis can be used recreationally and/or to help treat medical conditions. Cannabis has positive effects, medical effects, and
+some negative side effects as well. The positive effects are: Relaxed, Hungry, Euphoric, Happy, Creative, Energetic, Talkative, Uplifted, Tingly, Sleepy, Focused, Giggly, and Aroused. 
+The medical effects are: Depression, Insomnia, Pain, Stress, Cramps, Lack of Appetite, Nausea, Headache, Fatigue, Eye Pressure, Inflammation, Spasticity, Seizures, and Muscle Spasms. 
+The negative effects are: Dizzy, Dry Mouth, Paranoid, Dry Eyes, and Anxious.  </p>
+</div>
+
+
+<!-- ------------------ FLAVA ---------------------------- -->
+
+<div id='divContainer' class='containerCell'>
+  <h3>Filter Cannabis Strains by Flavor</h3>
+  <p>Each cannabis strain has a unique flavor profile that include the following: Earthy, Chemical, Pine, 
+    Spicy/Herbal, Pungent, Pepper, Flowery, Citrus, Orange, Sweet, Skunk, Grape, Minty, Woody, Cheese,
+    Diesel, Tropical, Grapefruit, Nutty, Lemon, Berry, Blueberry, Ammonia, Apple, Rose, Butter, Honey,
+    Tea, Lime, Lavender, Strawberry, Mint, Chestnut, Tree Fruit, Pear, Apricot, Peach, Blue Cheese,
+    Menthol, Coffee, Tar, Mango, Pineapple, Sage, Vanilla, Plum, Tobacco, and Violet.
+    </p>
+  
+
+  <!-- <label>Use the selector to filter cannabis strains by flavor:</label>
+
+  <select id="flavorSelector">
+
+  </select>
+  <button id="searchFlavorButton" onclick="flavorOptions()">Search</button> -->
+  </div>
+
+
+  <!-- ------------------ ALL STRAINS ---------------------------- -->
+ 
+<div id='divContainer' class='containerCell'>
   <h3>All Cannabis Strain Information</h3>
   <label>Press the this button to display the entire list of all cannabis strains including the strain name, strain
     type, strain identification number(ID), strain flavors, and strain effects:</label>
   <button id="allButtonBody">All Strains</button>
   </div>
-  <p></p>
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-<div class='containerCell'>
-
-
-</div>
-
-
-
-<!-- ------------------ FLAVA ---------------------------- -->
-
-<div class='containerCell'>
-  <h3>Filter Cannabis Strains by Flavor</h3>
-  <p>Each cannabis strain has a unique flavor profile.</p>
-  <label>Use the selector to filter cannabis strains by flavor:</label>
-
-  <select id="flavorSelector">
-
-  </select>
-  <button id="searchFlavorButton" onclick="flavorOptions()">Search</button>
-  </div>
-
-  </div>
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-
-
-
-<!-- ------------------ EFFECTS ---------------------------- -->
-
-<div id='effectContainer'>
-
-<div id='effectInfo'>
-<h3>Cannabis Strains by Effects</h3>
-<p>Cannabis can be used for recreationally and/or to help treat medical conditions. Cannabis has positive effects and
-some negative side effects as well.</p>
+<!-- ------------------ Display div ---------------------------- -->
+  <div id="displayDiv"></div>
   
-</div>
-
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 <!-- -------------------------- Effect Divs ------------------- -->
 
 <!-- <label>Use the selectors to filter cannabis strains by either positive effects, medical
@@ -224,7 +251,6 @@ some negative side effects as well.</p>
     <option name="med" value="Nausea">Nausea</option>
     <option name="med" value="Headache">Headache</option>
     <option name="med" value="Fatigue">Fatigue</option>
-    <option name="med" value="Headaches">Headaches</option>
     <option name="med" value="Eye Pressure">Eye Pressure</option>
     <option name="med" value="Inflammation">Inflammation</option>
     <option name="med" value="Spasticity">Spasticity</option>
@@ -253,14 +279,7 @@ some negative side effects as well.</p>
 
 </div> -->
 
-</div>
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-
-
-
-
-
+<!-- </div> -->
 
 <!-- ------------------ DESCRIPTION ---------------------------- -->
 
@@ -272,24 +291,6 @@ some negative side effects as well.</p>
   <input id="idTextBox" type="text" placeholder="Enter Strain ID Number" required />
 
   <button id="descButton">Display Strain Description</button> -->
-
-
-<!-- ------------------ INFO DISPLAY ---------------------------- -->
-
-  
-<div id='strainInfo'>
-  <h3>Cannabis Strain Type Information</h3>
-  <label>Press the corresponding button to display the entire list of all cannabis strains in the given type, including the strain name, strain identification number(ID), strain flavors, and strain effects:</label>
-  <br>
-  <button id="sativaButtonBody">Sativa</button>
-  <button id="indicaButtonBody">Indica</button>
-  <button id="hybridButtonBody">Hybrid</button>
-  <p></p>
-</div>
-
-  <div id="displayDiv"></div>
-  <div id="displayDiv"></div>
-  <p></p>
 
   <!-- <div class="font" id="displayDiv"></div> -->
   <!-- Optional JavaScript -->

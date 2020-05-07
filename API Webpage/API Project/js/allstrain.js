@@ -8,7 +8,7 @@ let allButtonBody = document.getElementById("allButtonBody")
 // let searchNegativeEffectButton  = document.getElementById("searchNegativeEffectButton")
 // let searchFlavorButton = document.getElementById("searchFlavorButton")
 let nameButton = document.getElementById("nameButton")
-let displayDivDisplayAll = document.getElementById("displayDivDisplayAll")
+let displayDivAllStrain = document.getElementById("displayDivAllStrain")
 //--------------------------------------------------------------------
 // CODE FOR ALL STRAINS API 
 //--------------------------------------------------------------------
@@ -37,7 +37,7 @@ let displayDivDisplayAll = document.getElementById("displayDivDisplayAll")
 // })
 
 function renderPosts(strainPosts) {
-    displayDivDisplayAll.innerHTML = ""
+    displayDivAllStrain.innerHTML = ""
     let strainItems = ""
     for (let index = 0; index < Object.values(strainPosts).length; index++) {
         const strainItem = Object.values(strainPosts)[index]
@@ -55,7 +55,7 @@ function renderPosts(strainPosts) {
             </div>
         </div>`
     }
-    displayDivDisplayAll.innerHTML = strainItems
+    displayDivAllStrain.innerHTML = strainItems
 }
 renderPosts()
 
@@ -108,6 +108,6 @@ nameButton.addEventListener("click", function () {
                         </div>
                     </div>`
             })            
-            displayDivDisplayAll.innerHTML = nameVar
+            displayDivAllStrain.innerHTML = nameVar
         })
 })
