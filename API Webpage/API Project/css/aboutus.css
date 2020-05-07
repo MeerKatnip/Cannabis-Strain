@@ -1,4 +1,7 @@
-
+h1 {
+  font-size: 65px;
+  font-style: italic;
+}
 .column {
   column-count: auto;
 }
@@ -47,6 +50,7 @@ img {
   padding: 30px;
 
 }
+
 
 
 
