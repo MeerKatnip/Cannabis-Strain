@@ -6,7 +6,7 @@
 
 **How to use:**
 
-A user does not need to enter any credentials to access app information. The home page will allow a user to navigate between informational articles on the image carousel or links to internal pages by clicking on large linked divs. The navigation bar at the top offers users a uniform way to navigate to interal pages. 
+A user does not need to enter any credentials to access app information. The home page will allow a user to navigate between informational articles on the image carousel or links to internal pages by clicking on linked headers. The navigation bar at the top offers users a uniform way to navigate to interal pages. 
 
 **Features on the app:**
 
