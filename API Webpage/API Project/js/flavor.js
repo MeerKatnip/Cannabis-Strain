@@ -191,6 +191,9 @@ searchFlavorButton.addEventListener("click", function () {
             })
             displayFlavorGif.innerHTML = ""
             displayDivFlavor.innerHTML = flavorItem.join("")
+        }).catch((err) => {
+            displayFlavorGif.innerHTML = `<h1 style="color: red">Oops, there was a problem getting the data!</h1>"`
+        
         })
 })
 
