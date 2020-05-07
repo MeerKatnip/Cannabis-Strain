@@ -89,6 +89,12 @@ body {
 .carousel-inner {
     height: auto;
     width: auto;
+    
+}
+
+.img-thumbnail {
+    background-color: black;
+    border: none;
 }
 
 .d-block {
