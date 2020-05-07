@@ -113,6 +113,22 @@ body {
     justify-content: center;
 }
 
+#homeDivs {
+    font-size: 30px;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: seagreen;
+}
+
 /* div {
  display: flexbox; 
 } */
