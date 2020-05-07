@@ -1,6 +1,6 @@
 // let   = document.getElementById("")
 // let allButtonMenu = document.getElementById("allButtonMenu")
-let allButtonBodyEffect = document.getElementById("allButtonBodyEffect")
+// let allButtonBodyEffect = document.getElementById("allButtonBodyEffect")
 let searchPositiveEffectButton = document.getElementById("searchPositiveEffectButton")
 let searchMedicalEffectButton  = document.getElementById("searchMedicalEffectButton")
 let searchNegativeEffectButton  = document.getElementById("searchNegativeEffectButton")
@@ -10,27 +10,27 @@ let displayDivEffect = document.getElementById("displayDivEffect")
 //--------------------------------------------------------------------
 // CODE FOR ALL STRAINS API 
 //--------------------------------------------------------------------
-function renderPosts(strainPosts) {
-    displayDivEffect.innerHTML = ""
-    let strainItems = ""
-    for (let index = 0; index < Object.values(strainPosts).length; index++) {
-        const strainItem = Object.values(strainPosts)[index]
-        strainItems += `
-        <div class="card w-75" style="width: 18rem;">
-            <div class="card-body" class="card text-center">
-                <h4><b>${Object.keys(strainPosts)[index]}</b></h4>
-                <h6 class="card-subtitle mb-2 text-muted">${strainItem.race}</h6>
-                <p id="descList" class="card-text"></p>
-                <p class="card-text"><b>ID: </b>${strainItem.id}</p>
-                <p class="card-text"><b>Flavors: </b>${strainItem.flavors}</p>
-                <p class="card-text"><b>Helps to treat: </b>${strainItem.effects.medical}</p>
-                <p class="card-text"><b>Positive Effects: </b>${strainItem.effects.positive}</p>
-                <p class="card-text"><b>Negative Effects: </b>${strainItem.effects.negative}</p>
-            </div>
-        </div>`
-    }
-    displayDivEffect.innerHTML = strainItems
-}
+// function renderPosts(strainPosts) {
+//     displayDivEffect.innerHTML = ""
+//     let strainItems = ""
+//     for (let index = 0; index < Object.values(strainPosts).length; index++) {
+//         const strainItem = Object.values(strainPosts)[index]
+//         strainItems += `
+//         <div class="card w-75" style="width: 18rem;">
+//             <div class="card-body" class="card text-center">
+//                 <h4><b>${Object.keys(strainPosts)[index]}</b></h4>
+//                 <h6 class="card-subtitle mb-2 text-muted">${strainItem.race}</h6>
+//                 <p id="descList" class="card-text"></p>
+//                 <p class="card-text"><b>ID: </b>${strainItem.id}</p>
+//                 <p class="card-text"><b>Flavors: </b>${strainItem.flavors}</p>
+//                 <p class="card-text"><b>Helps to treat: </b>${strainItem.effects.medical}</p>
+//                 <p class="card-text"><b>Positive Effects: </b>${strainItem.effects.positive}</p>
+//                 <p class="card-text"><b>Negative Effects: </b>${strainItem.effects.negative}</p>
+//             </div>
+//         </div>`
+//     }
+//     displayDivEffect.innerHTML = strainItems
+// }
 
 // allButtonMenu.addEventListener("click", function () {
 //     fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/all")
@@ -40,13 +40,13 @@ function renderPosts(strainPosts) {
 //         })
 // })
 
-allButtonBodyEffect.addEventListener("click", function () {
-    fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/all")
-        .then(response => response.json())
-        .then(strainPosts => {
-            renderPosts(strainPosts)
-    })
-})
+// allButtonBodyEffect.addEventListener("click", function () {
+//     fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/all")
+//         .then(response => response.json())
+//         .then(strainPosts => {
+//             renderPosts(strainPosts)
+//     })
+// })
 
 //--------------------------------------------------------------------
 // CODE FOR STRAIN SELECTOR BY RACE
@@ -80,10 +80,11 @@ function PosEffects() {
         .then(response => response.json())
         .then(effectPosts => {
             let effectItem = effectPosts.map(function (effect) {
-                return `<div class="card w-75" style="width: 18rem;">
-                <div class="card-body" class="card text-center">
+                return `<div class="cardTest" style="width: 30%;">
+                <div class="cardBody" class="card text-center">
                 <h4><b>${effect.name}</b></h4>
                 <h6 class="card-subtitle mb-2 text-muted">${effect.id}</h6>
+                <img id='weedLeaf' src='https://www.freepnglogos.com/uploads/weed-leaf-png/weed-leaf-weed-symbol-drawing-clipart-panda-clipart-images-23.png'>
                 <p class="card-text">${effect.race}</p>
                 <p class="card-text">${effect.effect}</p>
                 </div>
@@ -104,10 +105,11 @@ function MedEffects() {
         .then(response => response.json())
         .then(effectPosts => {
             let effectItem = effectPosts.map(function (effect) {
-                return `<div class="card w-75" style="width: 18rem;">
-                <div class="card-body" class="card text-center">
+                return `<div class="cardTest" style="width: 30%;">
+                <div class="cardBody" class="card text-center">
                 <h4><b>${effect.name}</b></h4>
                 <h6 class="card-subtitle mb-2 text-muted">${effect.id}</h6>
+                <img id='weedLeaf' src='https://www.freepnglogos.com/uploads/weed-leaf-png/weed-leaf-weed-symbol-drawing-clipart-panda-clipart-images-23.png'>
                 <p class="card-text">${effect.race}</p>
                 <p class="card-text">${effect.effect}</p>
                 </div>
@@ -128,10 +130,11 @@ function NegEffects() {
         .then(response => response.json())
         .then(effectPosts => {
             let effectItem = effectPosts.map(function (effect) {
-                return `<div class="card w-75" style="width: 18rem;">
-                <div class="card-body" class="card text-center">
+                return `<div class="cardTest" style="width: 30%;">
+                <div class="cardBody" class="card text-center">
                 <h4><b>${effect.name}</b></h4>
                 <h6 class="card-subtitle mb-2 text-muted">${effect.id}</h6>
+                <img id='weedLeaf' src='https://www.freepnglogos.com/uploads/weed-leaf-png/weed-leaf-weed-symbol-drawing-clipart-panda-clipart-images-23.png'>
                 <p class="card-text">${effect.race}</p>
                 <p class="card-text">${effect.effect}</p>
                 </div>

@@ -2,21 +2,22 @@
 column {
   column-count: auto;
 }
-header  {
-  background-color: green
-  text-align center;
-  padding:20px
-
+#title {
+  background-color: grey;
+  text-align: center;
+  padding: 20px;
 }
 
 body {
   background-color: white ;
   text-align: center;
+  align-items: center;
 
 
 }
 img {
   border-radius: 60%;
+  
 }
 
 

@@ -9,13 +9,13 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/type.css" />
   <title>Cannabis Strain App Website</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="">Cannabis Strain App</a>
+  <nav id='navBar' class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="index.html">Cannabis Strain App</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -23,12 +23,8 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" role="button" href="index.html">Home<span class="sr-only">(current)</span></a>
-        </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li> -->
+       
+        
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">View </a>
@@ -36,22 +32,27 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a href="type.html"><button  class="dropdown-item">Strain Type</button></a> 
             <a href="effect.html"><button  class="dropdown-item">Strain Effects</button></a>
-            <a href="flavor.html"> <button  class="dropdown-item">Strain Flavors</button></a>
+            <a href="flavor.html"></ahref> <button  class="dropdown-item">Strain Flavors</button></a>
             <a> <div class="dropdown-divider"></div></a>
-            <a href="all-strains.html"> <button class="dropdown-item" >All Strains</button></a>
+            <a href="allstrain.html"> <button class="dropdown-item" >All Strains</button></a>
           </div>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="aboutus.html">About Us</a>
+        </li>
+        
       </ul>
     </div>
   </nav>
+  
   <!-- <img src="images/cannabis-header.jpg" class="img-fluid" alt="Responsive image"> -->
   <!-- <h1>Cannabis Strain App</h1> -->
-  <p></p>
+  <!-- <p></p>
   <h3>All Cannabis Strain Information</h3>
   <label>Press the this button to display the entire list of all cannabis strains including the strain name, strain
     type, strain identification number(ID), strain flavors, and strain effects:</label>
   <button id="allButtonBody">All Strains</button>
-  <p></p>
+  <p></p> -->
   <!-- <h3>Filter Cannabis Strains by Effects</h3>
   <p>Cannabis can be used for recreationally and/or to help treat medical conditions. Cannabis has positive effects and
     some negative side effects as well.</p>
@@ -122,16 +123,18 @@
   <label for="idTextBox">Type in a cannabis strain ID number to view a description of the strain:</label>
   <input id="idTextBox" type="text" placeholder="Enter Strain ID Number" required />
   <button id="descButton">Display Strain Description</button> -->
-  
+  <div id='strainInfo'>  
+<h3>Cannabis Strain Type Information</h3>
+<label>Press the corresponding button to display the entire list of all cannabis strains in the given type, including the strain name, strain identification number(ID), strain flavors, and strain effects:</label>
+<br>
+<button id="sativaButtonBody">Sativa</button>
+<button id="indicaButtonBody">Indica</button>
+<button id="hybridButtonBody">Hybrid</button>
+  </div>
 
-  <h3>Cannabis Strain Type</h3>
-  <label for="typeTextBox">Type in a cannabis strain type (sativa, hybrid, or indica) to view all strains of that type:</label>
-    <input id="typeTextBox" type="text" placeholder="Enter Strain Type" required />
-    <button id="typeButton">All Strains</button>
-  <p></p>  
-  <div id="displayDivRace"></div>
-  <p></p>
+<div id="displayDivType"></div>
 
+<p></p>
   <!-- <div class="font" id="displayDiv"></div> -->
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -147,7 +150,7 @@
 
     <!-- <script src="js/strain.js"></script>
     <script src="js/display-all.js"></script> -->
-    <script src="js/race.js"></script>
+    <script src="js/type.js"></script>
     <!-- <script src="js/effect.js"></script>
     <script src="js/flavor.js"></script> -->
 </body>

@@ -71,76 +71,76 @@ allButtonBody.addEventListener("click", function () {
 // }
 
 // searchPositiveEffectButton.addEventListener("click", function () {
-function PosEffects() {
-    var e = document.getElementById("effectSelectorPositive").selectedIndex;
-    console.log(e)
-    var posSelection = document.getElementsByName("pos")[e].value;
-    console.log(posSelection)
-    let effectURL = `http://strainapi.evanbusse.com/0d4ocxj/strains/search/effect/${posSelection}`
-    fetch(effectURL)
-        .then(response => response.json())
-        .then(effectPosts => {
-            let effectItem = effectPosts.map(function (effect) {
-                return `<div class="card w-75" style="width: 18rem;">
-                <div class="card-body" class="card text-center">
-                <h4><b>${effect.name}</b></h4>
-                <h6 class="card-subtitle mb-2 text-muted">${effect.id}</h6>
-                <p class="card-text">${effect.race}</p>
-                <p class="card-text">${effect.effect}</p>
-                </div>
-            </div>`
-            })
-            displayDiv.innerHTML = effectItem.join("")
-        })
-}
+// function PosEffects() {
+//     var e = document.getElementById("effectSelectorPositive").selectedIndex;
+//     console.log(e)
+//     var posSelection = document.getElementsByName("pos")[e].value;
+//     console.log(posSelection)
+//     let effectURL = `http://strainapi.evanbusse.com/0d4ocxj/strains/search/effect/${posSelection}`
+//     fetch(effectURL)
+//         .then(response => response.json())
+//         .then(effectPosts => {
+//             let effectItem = effectPosts.map(function (effect) {
+//                 return `<div class="card w-75" style="width: 18rem;">
+//                 <div class="card-body" class="card text-center">
+//                 <h4><b>${effect.name}</b></h4>
+//                 <h6 class="card-subtitle mb-2 text-muted">${effect.id}</h6>
+//                 <p class="card-text">${effect.race}</p>
+//                 <p class="card-text">${effect.effect}</p>
+//                 </div>
+//             </div>`
+//             })
+//             displayDiv.innerHTML = effectItem.join("")
+//         })
+// }
 
 // searchMedicalEffectButton.addEventListener("click", function () {
-function MedEffects() {
-    var e = document.getElementById("effectSelectorMedical").selectedIndex;
-    console.log(e)
-    var medSelection = document.getElementsByName("med")[e].value;
-    console.log(medSelection)
-    let effectURL = `http://strainapi.evanbusse.com/0d4ocxj/strains/search/effect/${medSelection}`
-    fetch(effectURL)
-        .then(response => response.json())
-        .then(effectPosts => {
-            let effectItem = effectPosts.map(function (effect) {
-                return `<div class="card w-75" style="width: 18rem;">
-                <div class="card-body" class="card text-center">
-                <h4><b>${effect.name}</b></h4>
-                <h6 class="card-subtitle mb-2 text-muted">${effect.id}</h6>
-                <p class="card-text">${effect.race}</p>
-                <p class="card-text">${effect.effect}</p>
-                </div>
-            </div>`
-            })
-            displayDiv.innerHTML = effectItem.join("")
-        })
-}
+// function MedEffects() {
+//     var e = document.getElementById("effectSelectorMedical").selectedIndex;
+//     console.log(e)
+//     var medSelection = document.getElementsByName("med")[e].value;
+//     console.log(medSelection)
+//     let effectURL = `http://strainapi.evanbusse.com/0d4ocxj/strains/search/effect/${medSelection}`
+//     fetch(effectURL)
+//         .then(response => response.json())
+//         .then(effectPosts => {
+//             let effectItem = effectPosts.map(function (effect) {
+//                 return `<div class="card w-75" style="width: 18rem;">
+//                 <div class="card-body" class="card text-center">
+//                 <h4><b>${effect.name}</b></h4>
+//                 <h6 class="card-subtitle mb-2 text-muted">${effect.id}</h6>
+//                 <p class="card-text">${effect.race}</p>
+//                 <p class="card-text">${effect.effect}</p>
+//                 </div>
+//             </div>`
+//             })
+//             displayDiv.innerHTML = effectItem.join("")
+//         })
+// }
 
 // searchNegativeEffectButton.addEventListener("click", function () {
-function NegEffects() {
-    var e = document.getElementById("effectSelectorNegative").selectedIndex;
-    console.log(e)
-    var negSelection = document.getElementsByName("neg")[e].value;
-    console.log(negSelection)
-    let effectURL = `http://strainapi.evanbusse.com/0d4ocxj/strains/search/effect/${negSelection}`
-    fetch(effectURL)
-        .then(response => response.json())
-        .then(effectPosts => {
-            let effectItem = effectPosts.map(function (effect) {
-                return `<div class="card w-75" style="width: 18rem;">
-                <div class="card-body" class="card text-center">
-                <h4><b>${effect.name}</b></h4>
-                <h6 class="card-subtitle mb-2 text-muted">${effect.id}</h6>
-                <p class="card-text">${effect.race}</p>
-                <p class="card-text">${effect.effect}</p>
-                </div>
-            </div>`
-            })
-            displayDiv.innerHTML = effectItem.join("")
-        })
-}
+// function NegEffects() {
+//     var e = document.getElementById("effectSelectorNegative").selectedIndex;
+//     console.log(e)
+//     var negSelection = document.getElementsByName("neg")[e].value;
+//     console.log(negSelection)
+//     let effectURL = `http://strainapi.evanbusse.com/0d4ocxj/strains/search/effect/${negSelection}`
+//     fetch(effectURL)
+//         .then(response => response.json())
+//         .then(effectPosts => {
+//             let effectItem = effectPosts.map(function (effect) {
+//                 return `<div class="card w-75" style="width: 18rem;">
+//                 <div class="card-body" class="card text-center">
+//                 <h4><b>${effect.name}</b></h4>
+//                 <h6 class="card-subtitle mb-2 text-muted">${effect.id}</h6>
+//                 <p class="card-text">${effect.race}</p>
+//                 <p class="card-text">${effect.effect}</p>
+//                 </div>
+//             </div>`
+//             })
+//             displayDiv.innerHTML = effectItem.join("")
+//         })
+// }
 
 
 //--------------------------------------------------------------------
@@ -195,61 +195,61 @@ function NegEffects() {
 
 
 // sativa button
-sativaButtonBody.addEventListener("click", function () {
-    fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/race/sativa")
-        .then(response => response.json())
-        .then(typeClasses => {
-            let typeItem = typeClasses.map(function (type) {
-                return `<div class="card w-75" style="width: 18rem;">
-                <div class="card-body" class="card text-center">
-                <h4><b>${type.name}</b></h4>
-                <h6 class="card-subtitle mb-2 text-muted">${type.id}</h6>
-                <p id="descList" class="card-text"></p>
-                <p class="card-text"><b>Race: </b>${type.race}</p>
-                </div>
-            </div>`
-            })
-            displayDiv.innerHTML = typeItem.join("")
-        })
-})
+// sativaButtonBody.addEventListener("click", function () {
+//     fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/race/sativa")
+//         .then(response => response.json())
+//         .then(typeClasses => {
+//             let typeItem = typeClasses.map(function (type) {
+//                 return `<div class="card w-75" style="width: 18rem;">
+//                 <div class="card-body" class="card text-center">
+//                 <h4><b>${type.name}</b></h4>
+//                 <h6 class="card-subtitle mb-2 text-muted">${type.id}</h6>
+//                 <p id="descList" class="card-text"></p>
+//                 <p class="card-text"><b>Race: </b>${type.race}</p>
+//                 </div>
+//             </div>`
+//             })
+//             displayDiv.innerHTML = typeItem.join("")
+//         })
+// })
 
 // indica button
-indicaButtonBody.addEventListener("click", function () {
-    fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/race/indica")
-        .then(response => response.json())
-        .then(typeClasses => {
-            let typeItem = typeClasses.map(function (type) {
-                return `<div class="card w-75" style="width: 18rem;">
-                <div class="card-body" class="card text-center">
-                <h4><b>${type.name}</b></h4>
-                <h6 class="card-subtitle mb-2 text-muted">${type.id}</h6>
-                <p id="descList" class="card-text"></p>
-                <p class="card-text"><b>Race: </b>${type.race}</p>
-                </div>
-            </div>`
-            })
-            displayDiv.innerHTML = typeItem.join("")
-        })
-})
+// indicaButtonBody.addEventListener("click", function () {
+//     fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/race/indica")
+//         .then(response => response.json())
+//         .then(typeClasses => {
+//             let typeItem = typeClasses.map(function (type) {
+//                 return `<div class="card w-75" style="width: 18rem;">
+//                 <div class="card-body" class="card text-center">
+//                 <h4><b>${type.name}</b></h4>
+//                 <h6 class="card-subtitle mb-2 text-muted">${type.id}</h6>
+//                 <p id="descList" class="card-text"></p>
+//                 <p class="card-text"><b>Race: </b>${type.race}</p>
+//                 </div>
+//             </div>`
+//             })
+//             displayDiv.innerHTML = typeItem.join("")
+//         })
+// })
 
 // hybrid button
-hybridButtonBody.addEventListener("click", function () {
-    fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/race/hybrid")
-        .then(response => response.json())
-        .then(typeClasses => {
-            let typeItem = typeClasses.map(function (type) {
-                return `<div class="card w-75" style="width: 18rem;">
-                <div class="card-body" class="card text-center">
-                <h4><b>${type.name}</b></h4>
-                <h6 class="card-subtitle mb-2 text-muted">${type.id}</h6>
-                <p id="descList" class="card-text"></p>
-                <p class="card-text"><b>Race: </b>${type.race}</p>
-                </div>
-            </div>`
-            })
-            displayDiv.innerHTML = typeItem.join("")
-        })
-})
+// hybridButtonBody.addEventListener("click", function () {
+//     fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/race/hybrid")
+//         .then(response => response.json())
+//         .then(typeClasses => {
+//             let typeItem = typeClasses.map(function (type) {
+//                 return `<div class="card w-75" style="width: 18rem;">
+//                 <div class="card-body" class="card text-center">
+//                 <h4><b>${type.name}</b></h4>
+//                 <h6 class="card-subtitle mb-2 text-muted">${type.id}</h6>
+//                 <p id="descList" class="card-text"></p>
+//                 <p class="card-text"><b>Race: </b>${type.race}</p>
+//                 </div>
+//             </div>`
+//             })
+//             displayDiv.innerHTML = typeItem.join("")
+//         })
+// })
 
 
 // fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/race/RACE")
@@ -286,21 +286,21 @@ hybridButtonBody.addEventListener("click", function () {
 //             // console.log(descItems)
 
 //         }
-descButton.addEventListener("click", function () {
-    let descURL = `http://strainapi.evanbusse.com/0d4ocxj/strains/data/desc/${idTextBox.value}`
-    fetch(descURL)
-        .then(response => response.json())
-        .then(descPosts => {
-            console.log(descPosts)
-            let descVar = `<div class="card w-75" style="width: 18rem;">
-                            <div class="card-body" class="card text-center">
-                                <h6 class="card-subtitle mb-2 text-muted">${idTextBox.value}</h6>
-                                <h6>${descPosts.desc}</h6>
-                            </div>
-                        </div>`
-            displayDiv.innerHTML = descVar
-        })
-})
+// descButton.addEventListener("click", function () {
+//     let descURL = `http://strainapi.evanbusse.com/0d4ocxj/strains/data/desc/${idTextBox.value}`
+//     fetch(descURL)
+//         .then(response => response.json())
+//         .then(descPosts => {
+//             console.log(descPosts)
+//             let descVar = `<div class="card w-75" style="width: 18rem;">
+//                             <div class="card-body" class="card text-center">
+//                                 <h6 class="card-subtitle mb-2 text-muted">${idTextBox.value}</h6>
+//                                 <h6>${descPosts.desc}</h6>
+//                             </div>
+//                         </div>`
+//             displayDiv.innerHTML = descVar
+//         })
+// })
 
 //--------------------------------------------------------------------
 // API ADDRESSES FOR REFERENCE 

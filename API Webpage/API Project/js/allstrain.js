@@ -8,7 +8,7 @@ let allButtonBody = document.getElementById("allButtonBody")
 // let searchNegativeEffectButton  = document.getElementById("searchNegativeEffectButton")
 // let searchFlavorButton = document.getElementById("searchFlavorButton")
 let nameButton = document.getElementById("nameButton")
-let displayDivDisplayAll = document.getElementById("displayDivDisplayAll")
+let displayDivAllStrain = document.getElementById("displayDivAllStrain")
 //--------------------------------------------------------------------
 // CODE FOR ALL STRAINS API 
 //--------------------------------------------------------------------
@@ -37,16 +37,17 @@ let displayDivDisplayAll = document.getElementById("displayDivDisplayAll")
 // })
 
 function renderPosts(strainPosts) {
-    displayDivDisplayAll.innerHTML = ""
+    displayDivAllStrain.innerHTML = ""
     let strainItems = ""
     for (let index = 0; index < Object.values(strainPosts).length; index++) {
         const strainItem = Object.values(strainPosts)[index]
         strainItems += `
-        <div class="card w-75" style="width: 18rem;">
-            <div class="card-body" class="card text-center">
+        <div class="cardTest" style="width: 30%;">
+            <div class="cardBody" class="card text-center">
                 <h4><b>${Object.keys(strainPosts)[index]}</b></h4>
                 <h6 class="card-subtitle mb-2 text-muted">${strainItem.race}</h6>
                 <p id="descList" class="card-text"></p>
+                <img id='weedLeaf' src='https://www.freepnglogos.com/uploads/weed-leaf-png/weed-leaf-weed-symbol-drawing-clipart-panda-clipart-images-23.png'>
                 <p class="card-text"><b>ID: </b>${strainItem.id}</p>
                 <p class="card-text"><b>Flavors: </b>${strainItem.flavors}</p>
                 <p class="card-text"><b>Helps to treat: </b>${strainItem.effects.medical}</p>
@@ -55,9 +56,9 @@ function renderPosts(strainPosts) {
             </div>
         </div>`
     }
-    displayDivDisplayAll.innerHTML = strainItems
+    displayDivAllStrain.innerHTML = strainItems
 }
-renderPosts()
+
 
 allButtonBody.addEventListener("click", function () {
     fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/all")
@@ -98,16 +99,17 @@ nameButton.addEventListener("click", function () {
             console.log(namePosts)
             let nameVar = namePosts.map(function(name) {
                 return `
-                    <div class="card w-75" style="width: 18rem;">
-                            <div class="card-body" class="card text-center">
-                            <p class="card-text">${name.id}</p>
-                            <h4><b>${name.name}</b></h4>
-                            <h6 class="card-subtitle mb-2 text-muted">${name.race}</h6>
-                            <p id="descList" class="card-text"></p>
-                            <p class="card-text">${name.desc}</p>    
-                        </div>
-                    </div>`
+                <div class="cardTest" style="width: 30%;">
+                    <div class="cardBody" class="card text-center">
+                    <img id='weedLeaf' src='https://www.freepnglogos.com/uploads/weed-leaf-png/weed-leaf-weed-symbol-drawing-clipart-panda-clipart-images-23.png'>            
+                        <p class="card-text">${name.id}</p>
+                        <h4><b>${name.name}</b></h4>
+                        <h6 class="card-subtitle mb-2 text-muted">${name.race}</h6>
+                        <p id="descList" class="card-text"></p>
+                        <p class="card-text">${name.desc}</p>    
+                    </div>
+                </div>`
             })            
-            displayDivDisplayAll.innerHTML = nameVar
+            displayDivAllStrain.innerHTML = nameVar
         })
 })

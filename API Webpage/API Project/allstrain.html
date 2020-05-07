@@ -9,13 +9,13 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <!-- <link rel="stylesheet" href="css/styles.css" /> -->
+  <link rel="stylesheet" href="css/allstrain.css" />
   <title>Cannabis Strain App Website</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="http://cannabis-strain-app.surge.sh/display-all-strains">Cannabis Strain App</a>
+  <nav id='navBar' class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="index.html">Cannabis Strain App</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -23,12 +23,8 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" role="button" href="index.html">Home<span class="sr-only">(current)</span></a>
-        </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li> -->
+       
+        
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">View </a>
@@ -36,11 +32,15 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a href="type.html"><button  class="dropdown-item">Strain Type</button></a> 
             <a href="effect.html"><button  class="dropdown-item">Strain Effects</button></a>
-            <a href="flavor.html" > <button class="dropdown-item">Strain Flavors</button></a>
+            <a href="flavor.html"></ahref> <button  class="dropdown-item">Strain Flavors</button></a>
             <a> <div class="dropdown-divider"></div></a>
-            <a href="all-strains.html"> <button class="dropdown-item">All Strains</button></a>
+            <a href="allstrain.html"> <button class="dropdown-item" >All Strains</button></a>
           </div>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="aboutus.html">About Us</a>
+        </li>
+        
       </ul>
     </div>
   </nav>
@@ -124,21 +124,20 @@
   <input id="idTextBox" type="text" placeholder="Enter Strain ID Number" required />
   <button id="descButton">Display Strain Description</button>
   <p></p> -->
-  
+  <div id="strainInfo">
   <label>Press the this button to display the entire list of all cannabis strains including the strain name, strain
     type, strain identification number(ID), strain flavors, and strain effects:</label>
   <button id="allButtonBody">All Strains</button>
-  <p></p>
-
+</div>
+<div id="strainInfo">
   <h3>View Cannabis Strain by Name</h3>
   <label for="nameTextBox">Type in a cannabis strain name to view a description of the strain:</label>
   <input id="nameTextBox" type="text" placeholder="Enter Strain Name" required />
   <button id="nameButton">Display Strain Information</button>
-  <p></p>
+</div>
 
-  <div id="displayDivDisplayAll"></div>
+  <div id="displayDivAllStrain"></div>
   
-  <p></p>
   <!-- <div class="font" id="displayDiv"></div> -->
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -153,7 +152,7 @@
     crossorigin="anonymous"></script>
   
   <!-- <script src="js/strain.js"></script> -->
-  <script src="js/display-all.js"></script>
+  <script src="js/allstrain.js"></script>
   <!-- <script src="js/race.js"></script>
   <script src="js/effect.js"></script>
   <script src="js/flavor.js"></script> -->
