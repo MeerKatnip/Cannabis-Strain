@@ -6,31 +6,31 @@ let flavorSelector = document.getElementById("flavorSelector")
 let searchFlavorButton = document.getElementById("searchFlavorButton")
 // let nameButton = document.getElementById("nameButton")
 let displayDivFlavor = document.getElementById("displayDivFlavor")
-let allButtonBodyFlavor = document.getElementById("allButtonBodyFlavor")
+// let allButtonBodyFlavor = document.getElementById("allButtonBodyFlavor")
 //--------------------------------------------------------------------
 // CODE FOR ALL STRAINS API 
 //--------------------------------------------------------------------
-function renderPosts(strainPosts) {
-    displayDivFlavor.innerHTML = ""
-    let strainItems = ""
-    for (let index = 0; index < Object.values(strainPosts).length; index++) {
-        const strainItem = Object.values(strainPosts)[index]
-        strainItems += `
-        <div class="card w-75" style="width: 18rem;">
-            <div class="card-body" class="card text-center">
-                <h4><b>${Object.keys(strainPosts)[index]}</b></h4>
-                <h6 class="card-subtitle mb-2 text-muted">${strainItem.race}</h6>
-                <p id="descList" class="card-text"></p>
-                <p class="card-text"><b>ID: </b>${strainItem.id}</p>
-                <p class="card-text"><b>Flavors: </b>${strainItem.flavors}</p>
-                <p class="card-text"><b>Helps to treat: </b>${strainItem.effects.medical}</p>
-                <p class="card-text"><b>Positive Effects: </b>${strainItem.effects.positive}</p>
-                <p class="card-text"><b>Negative Effects: </b>${strainItem.effects.negative}</p>
-            </div>
-        </div>`
-    }
-    displayDivFlavor.innerHTML = strainItems
-}
+// function renderPosts(strainPosts) {
+//     displayDivFlavor.innerHTML = ""
+//     let strainItems = ""
+//     for (let index = 0; index < Object.values(strainPosts).length; index++) {
+//         const strainItem = Object.values(strainPosts)[index]
+//         strainItems += `
+//         <div class="card w-75" style="width: 18rem;">
+//             <div class="card-body" class="card text-center">
+//                 <h4><b>${Object.keys(strainPosts)[index]}</b></h4>
+//                 <h6 class="card-subtitle mb-2 text-muted">${strainItem.race}</h6>
+//                 <p id="descList" class="card-text"></p>
+//                 <p class="card-text"><b>ID: </b>${strainItem.id}</p>
+//                 <p class="card-text"><b>Flavors: </b>${strainItem.flavors}</p>
+//                 <p class="card-text"><b>Helps to treat: </b>${strainItem.effects.medical}</p>
+//                 <p class="card-text"><b>Positive Effects: </b>${strainItem.effects.positive}</p>
+//                 <p class="card-text"><b>Negative Effects: </b>${strainItem.effects.negative}</p>
+//             </div>
+//         </div>`
+//     }
+//     displayDivFlavor.innerHTML = strainItems
+// }
 
 // allButtonMenu.addEventListener("click", function () {
 //     fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/all")
@@ -40,13 +40,13 @@ function renderPosts(strainPosts) {
 //         })
 // })
 
-allButtonBodyFlavor.addEventListener("click", function () {
-    fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/all")
-        .then(response => response.json())
-        .then(strainPosts => {
-            renderPosts(strainPosts)
-    })
-})
+// allButtonBodyFlavor.addEventListener("click", function () {
+//     fetch("http://strainapi.evanbusse.com/0d4ocxj/strains/search/all")
+//         .then(response => response.json())
+//         .then(strainPosts => {
+//             renderPosts(strainPosts)
+//     })
+// })
 
 //--------------------------------------------------------------------
 // CODE FOR STRAIN SELECTOR BY RACE
@@ -171,14 +171,16 @@ searchFlavorButton.addEventListener("click", function () {
         .then(flavorPosts => {
 
             let flavorItem = flavorPosts.map(function (flavor) {
-                return `<div class="card w-75" style="width: 18rem;">
-                            <div class="card-body" class="card text-center">
-                                <h4><b>${flavor.name}</b></h4>
-                                <h6 class="card-subtitle mb-2 text-muted">${flavor.id}</h6>
-                                <p class="card-text">${flavor.race}</p>
-                                <p class="card-text">${flavor.flavor}</p>
-                            </div>
-                        </div>`
+                return `
+                <div class="cardTest" style="width: 30%;">
+                    <div class="cardBody" class="card text-center">
+                        <h4><b>${flavor.name}</b></h4>
+                        <h6 class="card-subtitle mb-2 text-muted">${flavor.id}</h6>
+                        <img id='weedLeaf' src='https://www.freepnglogos.com/uploads/weed-leaf-png/weed-leaf-weed-symbol-drawing-clipart-panda-clipart-images-23.png'>
+                        <p class="card-text">${flavor.race}</p>
+                        <p class="card-text">${flavor.flavor}</p>
+                        </div>
+                    </div>`
             })
             console.log(flavorItem)
             displayDivFlavor.innerHTML = flavorItem.join("")

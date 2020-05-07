@@ -6,10 +6,9 @@
 #divContainer {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: justify;
+    justify-content: space-evenly;
     padding: 2px;
-    /* background-color: black; */
+    background-color: black;
 
 }
 
@@ -18,7 +17,7 @@
 
  } 
 .containerCell {
-    width: 100%;
+    width: 33%;
     float: left;
     padding: 10px;
     margin: 3px;
