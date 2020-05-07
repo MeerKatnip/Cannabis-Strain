@@ -53,10 +53,11 @@ indicaButtonBody.addEventListener("click", function () {
         .then(response => response.json())
         .then(typeClasses => {
             let typeItem = typeClasses.map(function (type) {
-                return `<div class="card w-75" style="width: 18rem;">
-                <div class="card-body" class="card text-center">
+                return `<div class="cardTest" style="width: 30%;">
+                <div class="cardBody" class="card text-center">
                 <h4><b>${type.name}</b></h4>
                 <h6 class="card-subtitle mb-2 text-muted">${type.id}</h6>
+                <img id='weedLeaf' src='https://www.freepnglogos.com/uploads/weed-leaf-png/weed-leaf-weed-symbol-drawing-clipart-panda-clipart-images-23.png'>
                 <p id="descList" class="card-text"></p>
                 <p class="card-text"><b>Race: </b>${type.race}</p>
                 </div>
@@ -72,10 +73,11 @@ hybridButtonBody.addEventListener("click", function () {
         .then(response => response.json())
         .then(typeClasses => {
             let typeItem = typeClasses.map(function (type) {
-                return `<div class="card w-75" style="width: 18rem;">
-                <div class="card-body" class="card text-center">
+                return `<div class="cardTest" style="width: 30%;">
+                <div class="cardBody" class="card text-center">
                 <h4><b>${type.name}</b></h4>
                 <h6 class="card-subtitle mb-2 text-muted">${type.id}</h6>
+                <img id='weedLeaf' src='https://www.freepnglogos.com/uploads/weed-leaf-png/weed-leaf-weed-symbol-drawing-clipart-panda-clipart-images-23.png'>
                 <p id="descList" class="card-text"></p>
                 <p class="card-text"><b>Race: </b>${type.race}</p>
                 </div>

@@ -80,10 +80,11 @@ function PosEffects() {
         .then(response => response.json())
         .then(effectPosts => {
             let effectItem = effectPosts.map(function (effect) {
-                return `<div class="card w-75" style="width: 18rem;">
-                <div class="card-body" class="card text-center">
+                return `<div class="cardTest" style="width: 30%;">
+                <div class="cardBody" class="card text-center">
                 <h4><b>${effect.name}</b></h4>
                 <h6 class="card-subtitle mb-2 text-muted">${effect.id}</h6>
+                <img id='weedLeaf' src='https://www.freepnglogos.com/uploads/weed-leaf-png/weed-leaf-weed-symbol-drawing-clipart-panda-clipart-images-23.png'>
                 <p class="card-text">${effect.race}</p>
                 <p class="card-text">${effect.effect}</p>
                 </div>
@@ -104,10 +105,11 @@ function MedEffects() {
         .then(response => response.json())
         .then(effectPosts => {
             let effectItem = effectPosts.map(function (effect) {
-                return `<div class="card w-75" style="width: 18rem;">
-                <div class="card-body" class="card text-center">
+                return `<div class="cardTest" style="width: 30%;">
+                <div class="cardBody" class="card text-center">
                 <h4><b>${effect.name}</b></h4>
                 <h6 class="card-subtitle mb-2 text-muted">${effect.id}</h6>
+                <img id='weedLeaf' src='https://www.freepnglogos.com/uploads/weed-leaf-png/weed-leaf-weed-symbol-drawing-clipart-panda-clipart-images-23.png'>
                 <p class="card-text">${effect.race}</p>
                 <p class="card-text">${effect.effect}</p>
                 </div>
@@ -128,10 +130,11 @@ function NegEffects() {
         .then(response => response.json())
         .then(effectPosts => {
             let effectItem = effectPosts.map(function (effect) {
-                return `<div class="card w-75" style="width: 18rem;">
-                <div class="card-body" class="card text-center">
+                return `<div class="cardTest" style="width: 30%;">
+                <div class="cardBody" class="card text-center">
                 <h4><b>${effect.name}</b></h4>
                 <h6 class="card-subtitle mb-2 text-muted">${effect.id}</h6>
+                <img id='weedLeaf' src='https://www.freepnglogos.com/uploads/weed-leaf-png/weed-leaf-weed-symbol-drawing-clipart-panda-clipart-images-23.png'>
                 <p class="card-text">${effect.race}</p>
                 <p class="card-text">${effect.effect}</p>
                 </div>

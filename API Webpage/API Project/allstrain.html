@@ -23,9 +23,7 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <!-- <li class="nav-item active">
-          <a class="nav-link" role="button" href="home.html">Home<span class="sr-only">(current)</span></a>
-        </li> -->
+       
         
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -42,9 +40,7 @@
         <li class="nav-item">
           <a class="nav-link" href="aboutus.html">About Us</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contactus.html">Contact Us</a>
-        </li>
+        
       </ul>
     </div>
   </nav>
@@ -128,21 +124,20 @@
   <input id="idTextBox" type="text" placeholder="Enter Strain ID Number" required />
   <button id="descButton">Display Strain Description</button>
   <p></p> -->
-  
+  <div id="strainInfo">
   <label>Press the this button to display the entire list of all cannabis strains including the strain name, strain
     type, strain identification number(ID), strain flavors, and strain effects:</label>
   <button id="allButtonBody">All Strains</button>
-  <p></p>
-
+</div>
+<div id="strainInfo">
   <h3>View Cannabis Strain by Name</h3>
   <label for="nameTextBox">Type in a cannabis strain name to view a description of the strain:</label>
   <input id="nameTextBox" type="text" placeholder="Enter Strain Name" required />
   <button id="nameButton">Display Strain Information</button>
-  <p></p>
+</div>
 
   <div id="displayDivAllStrain"></div>
   
-  <p></p>
   <!-- <div class="font" id="displayDiv"></div> -->
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

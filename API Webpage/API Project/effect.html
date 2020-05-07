@@ -23,9 +23,7 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <!-- <li class="nav-item active">
-          <a class="nav-link" role="button" href="home.html">Home<span class="sr-only">(current)</span></a>
-        </li> -->
+       
         
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -42,9 +40,7 @@
         <li class="nav-item">
           <a class="nav-link" href="aboutus.html">About Us</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contactus.html">Contact Us</a>
-        </li>
+        
       </ul>
     </div>
   </nav>
@@ -53,13 +49,14 @@
   type, strain identification number(ID), strain flavors, and strain effects:</label>
   <button id="allButtonBodyEffect">All Strains</button>
   <p></p> -->
+  <div id="strainInfo">
   <h3>Filter Cannabis Strains by Effects</h3>
   <p>Cannabis can be used for recreationally and/or to help treat medical conditions. Cannabis has positive effects and
     some negative side effects as well.</p>
   <label>Use the selector to filter cannabis strains by either positive effects, medical
     conditions, or negative side effects:</label>
-  <p></p>
-
+  </div>
+<div id="strainInfo">
   <select id="effectSelectorPositive">
     <option name="pos" value="Relaxed">Relaxed</option>
     <option name="pos" value="Hungry">Hungry</option>
@@ -77,9 +74,9 @@
   </select>
 
     <button class="desiredEffect" id="searchPositiveEffectButton" onclick="PosEffects()">Search by Desired Effects</button>
+  </div>
   
-  <p></p>
-
+<div id="strainInfo">
   <select id="effectSelectorMedical">
     <option name="med" value="Depression">Depression</option>
     <option name="med" value="Insomnia">Insomnia</option>
@@ -97,8 +94,8 @@
     <option name="med" value="Muscle Spasms">Muscle Spasms</option>
   </select>
   <button class="medicalEffect" id="searchMedicalEffectButton" onclick="MedEffects()">Search by Medical Issues</button>
-  <p></p>
-
+</div>
+<div id="strainInfo">
   <select id="effectSelectorNegative">
     <option name="neg" value="Dizzy">Dizzy</option>
     <option name="neg" value="Dry Mouth">Dry Mouth</option>
@@ -107,7 +104,7 @@
     <option name="neg" value="Anxious">Anxious</option>
   </select>
   <button class="negativeEffect" id="searchNegativeEffectButton" onclick="NegEffects()">Search by Effects to Avoid</button>
-  <p></p>
+</div>
 
   <!-- <h3>Filter Cannabis Strains by Flavor</h3>
   <p>Each cannabis strain has a unique flavor profile.</p>
@@ -124,7 +121,7 @@
   <button id="descButton">Display Strain Description</button> -->
 
   <div id="displayDivEffect"></div>
-  <p></p>
+  
   <!-- <div class="font" id="displayDiv"></div> -->
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

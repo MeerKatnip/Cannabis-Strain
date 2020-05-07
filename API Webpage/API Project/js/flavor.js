@@ -171,14 +171,16 @@ searchFlavorButton.addEventListener("click", function () {
         .then(flavorPosts => {
 
             let flavorItem = flavorPosts.map(function (flavor) {
-                return `<div class="card w-75" style="width: 18rem;">
-                            <div class="card-body" class="card text-center">
-                                <h4><b>${flavor.name}</b></h4>
-                                <h6 class="card-subtitle mb-2 text-muted">${flavor.id}</h6>
-                                <p class="card-text">${flavor.race}</p>
-                                <p class="card-text">${flavor.flavor}</p>
-                            </div>
-                        </div>`
+                return `
+                <div class="cardTest" style="width: 30%;">
+                    <div class="cardBody" class="card text-center">
+                        <h4><b>${flavor.name}</b></h4>
+                        <h6 class="card-subtitle mb-2 text-muted">${flavor.id}</h6>
+                        <img id='weedLeaf' src='https://www.freepnglogos.com/uploads/weed-leaf-png/weed-leaf-weed-symbol-drawing-clipart-panda-clipart-images-23.png'>
+                        <p class="card-text">${flavor.race}</p>
+                        <p class="card-text">${flavor.flavor}</p>
+                        </div>
+                    </div>`
             })
             console.log(flavorItem)
             displayDivFlavor.innerHTML = flavorItem.join("")
