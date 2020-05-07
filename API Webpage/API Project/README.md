@@ -20,10 +20,6 @@ User navigates to the home page and is introduced to informational articles expl
 
 [Cannabis Strain app](websitelink.surge.sh)
 
-## Introduction Video of the Project
-
-[![Video of Cannabis Strain app](https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ACannabis_leaf.svg&psig=AOvVaw1bmkL-2VXjDGcQvU6lJQC9&ust=1588882091207000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLD96piFoOkCFQAAAAAdAAAAABAD)](https://youtu.be/yL64bV_VEhw "Title of Video")
-
 ## This site was built by:
 
 - [David Carlisle](https://github.com/dbc257)
