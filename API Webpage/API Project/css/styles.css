@@ -33,8 +33,7 @@
     border-radius: 5px;
     margin: 10px;
     padding: 15px;
-    color: white;
-    background-color: #272727;
+    background-color: black;
 
 }
 
@@ -101,17 +100,10 @@ body {
 .cardTest{
     background: rgba(235, 255, 235, .7);
     margin: 10px;
-    border-radius: 5px;
-
 }
 
-.cardBody {
-    margin: 10px;
-    color: black;
-    text-align: center;
-    overflow-wrap: break-word;
-
-
+.card-body {
+    margin: 10px
 
 }
 
