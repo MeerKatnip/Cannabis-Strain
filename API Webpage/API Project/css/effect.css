@@ -1,5 +1,9 @@
 /* Large Mobile Devices + Tablets */
 @media only screen and (min-width: 481px) {
+#thirdEffect {
+    width: 30%;
+}
+
 .img-heading {
     width: 100%;
     height: 50%;

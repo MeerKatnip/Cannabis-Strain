@@ -44,7 +44,7 @@ function renderPosts(strainPosts) {
         const strainItem = Object.values(strainPosts)[index]
         // console.log(strainItem.effects.medical.join(", "))
         strainItems += `
-        <div class="cardTest" style="width: 30%;">
+        <div class="cardTest" id="thirdAll">
             <div class="cardBody" class="card text-center">
                 <h4><b>${Object.keys(strainPosts)[index]}</b></h4>
                 <h6 class="card-subtitle mb-2 text-muted">${strainItem.race}</h6>
@@ -122,7 +122,7 @@ nameButton.addEventListener("click", function () {
                     description = "Description is not available"
                 }
                 return `
-                <div class="cardTest" style="width: 30%;">
+                <div class="cardTest" id="thirdAll">
                     <div class="cardBody" class="card text-center">
                     <img id='weedLeaf' src='https://www.freepnglogos.com/uploads/weed-leaf-png/weed-leaf-weed-symbol-drawing-clipart-panda-clipart-images-23.png'>            
                         <p class="card-text">${name.id}</p>

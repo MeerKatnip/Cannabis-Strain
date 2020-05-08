@@ -40,7 +40,7 @@ sativaButtonBody.addEventListener("click", function () {
         .then(typeClasses => {
             let typeItem = typeClasses.map(function (type) {
                 return `
-                <div class="cardTest" style="width: 30%;">
+                <div class="cardTest" id="thirdType">
                 <div class="cardBody" class="card text-center">
                 <h4><b>${type.name}</b></h4>
                 <h6 class="card-subtitle mb-2 text-muted">${type.id}</h6>
@@ -68,7 +68,7 @@ indicaButtonBody.addEventListener("click", function () {
         .then(response => response.json())
         .then(typeClasses => {
             let typeItem = typeClasses.map(function (type) {
-                return `<div class="cardTest" style="width: 30%;">
+                return `<div class="cardTest" id="thirdType">
                 <div class="cardBody" class="card text-center">
                 <h4><b>${type.name}</b></h4>
                 <h6 class="card-subtitle mb-2 text-muted">${type.id}</h6>
@@ -96,7 +96,7 @@ hybridButtonBody.addEventListener("click", function () {
         .then(response => response.json())
         .then(typeClasses => {
             let typeItem = typeClasses.map(function (type) {
-                return `<div class="cardTest" style="width: 30%;">
+                return `<div class="cardTest" id="thirdType">
                 <div class="cardBody" class="card text-center">
                 <h4><b>${type.name}</b></h4>
                 <h6 class="card-subtitle mb-2 text-muted">${type.id}</h6>
