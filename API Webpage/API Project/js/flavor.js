@@ -179,7 +179,7 @@ searchFlavorButton.addEventListener("click", function () {
 
             let flavorItem = flavorPosts.map(function (flavor) {
                 return `
-                <div class="cardTest" style="width: 30%;">
+                <div class="cardTest" id="thirdFlavor">
                     <div class="cardBody" class="card text-center">
                         <h4><b>${flavor.name}</b></h4>
                         <h6 class="card-subtitle mb-2 text-muted">${flavor.id}</h6>

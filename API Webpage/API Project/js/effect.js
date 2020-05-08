@@ -80,7 +80,7 @@ function PosEffects() {
         .then(response => response.json())
         .then(effectPosts => {
             let effectItem = effectPosts.map(function (effect) {
-                return `<div class="cardTest" style="width: 30%;">
+                return `<div class="cardTest" id="thirdEffect">
                 <div class="cardBody" class="card text-center">
                 <h4><b>${effect.name}</b></h4>
                 <h6 class="card-subtitle mb-2 text-muted">${effect.id}</h6>
@@ -105,7 +105,7 @@ function MedEffects() {
         .then(response => response.json())
         .then(effectPosts => {
             let effectItem = effectPosts.map(function (effect) {
-                return `<div class="cardTest" style="width: 30%;">
+                return `<div class="cardTest" id="thirdEffect">
                 <div class="cardBody" class="card text-center">
                 <h4><b>${effect.name}</b></h4>
                 <h6 class="card-subtitle mb-2 text-muted">${effect.id}</h6>
@@ -130,7 +130,7 @@ function NegEffects() {
         .then(response => response.json())
         .then(effectPosts => {
             let effectItem = effectPosts.map(function (effect) {
-                return `<div class="cardTest" style="width: 30%;">
+                return `<div class="cardTest" id="thirdEffect">
                 <div class="cardBody" class="card text-center">
                 <h4><b>${effect.name}</b></h4>
                 <h6 class="card-subtitle mb-2 text-muted">${effect.id}</h6>
