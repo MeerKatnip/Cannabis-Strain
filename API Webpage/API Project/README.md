@@ -6,7 +6,7 @@
 
 **How to use:**
 
-Anyone can access the website. A user does not need to enter any credentials to access the app information. One can access the different pages of the website by either clicking on the naviagtion bar or by clicking on the cards below the image carousel on the home page. If the user clicks on any of the carousel images, the website opens up a new tab to an informational article related to the image caption. 
+Anyone can access the website. Simply, go to http://cannabis-strain-app.surge.sh/ or click the Cannabis Strain App link below in order to start at the website's homepage. A user does not need to enter any credentials to access the app information. One can access the different pages of the website by either clicking on the naviagtion bar or by clicking on the cards below the image carousel on the home page. If the user clicks on any of the carousel images, the website opens up a new tab to an informational article related to the image caption. 
 
 **Features on the app:**
 
@@ -14,11 +14,11 @@ Upon entering the home page of the website, the image carousel is most likely th
 
 ## Site Preview
 
-![Preview image of app](https://github.com/dbc257/DigitalCrafts-Assignments/blob/master/API%20Webpage/API%20Project/REPLACEIMGNAME.jpg)
+![Preview image of app](https://github.com/dbc257/DigitalCrafts-Assignments/blob/master/API%20Webpage/API%20Project/images/homepage.png)
 
 ## Live Link
 
-[Cannabis Strain app](websitelink.surge.sh)
+[Cannabis Strain App](http://cannabis-strain-app.surge.sh/)
 
 ## This site was built by:
 
