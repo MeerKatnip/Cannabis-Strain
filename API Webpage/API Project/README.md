@@ -14,7 +14,7 @@ Upon entering the home page of the website, the image carousel is most likely th
 
 ## Site Preview
 
-![Preview image of app](https://github.com/dbc257/DigitalCrafts-Assignments/blob/master/API%20Webpage/API%20Project/REPLACEIMGNAME.jpg)
+![Preview image of app](https://github.com/dbc257/DigitalCrafts-Assignments/blob/master/API%20Webpage/API%20Project/images/homepage.png)
 
 ## Live Link
 
