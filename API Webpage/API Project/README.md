@@ -2,11 +2,11 @@
 
 **Purpose of this app:**
 
- As cannabis laws are changing, its medical use and recreational use are increasing in states where it is legal. Hence, this app's main purpose is to allow the recreational and/or medical cannabis user to sort through the myriad number of different cannabis strains available today. It's secondary purpose is to help educate others about the different strain types, strain flavors, and strain effects so that beginners are able to make an informed decision when buying cannabis legally. The app utilizes The Strain API database (http://strains.evanbusse.com/?ref=public-apis) of cannabis strains can be viewed by name, type, flavor, positive effects, negative affects, and medical symptoms that the strain helps to treat. 
+As cannabis laws are changing, its medical use and recreational use are increasing in states where it is legal. Hence, this app's main purpose is to allow the recreational and/or medical cannabis user to sort through the myriad number of different cannabis strains available today. It's secondary purpose is to help educate others about the different strain types, strain flavors, and strain effects so that beginners are able to make an informed decision when buying cannabis legally. The app utilizes The Strain API database (http://strains.evanbusse.com/?ref=public-apis) of cannabis strains can be viewed by name, type, flavor, positive effects, negative affects, and medical symptoms that the strain helps to treat.
 
 **How to use:**
 
-Anyone can access the website. Simply, go to http://cannabis-strain-app.surge.sh/ or click the Cannabis Strain App link below in order to start at the website's homepage. A user does not need to enter any credentials to access the app information. One can access the different pages of the website by either clicking on the naviagtion bar or by clicking on the cards below the image carousel on the home page. If the user clicks on any of the carousel images, the website opens up a new tab to an informational article related to the image caption. 
+Anyone can access the website. Simply, go to http://cannabis-strain-app.surge.sh/ or click the Cannabis Strain App link below in order to start at the website's homepage. A user does not need to enter any credentials to access the app information. One can access the different pages of the website by either clicking on the naviagtion bar or by clicking on the cards below the image carousel on the home page. If the user clicks on any of the carousel images, the website opens up a new tab to an informational article related to the image caption.
 
 **Features on the app:**
 
@@ -14,7 +14,7 @@ Upon entering the home page of the website, the image carousel is most likely th
 
 ## Site Preview
 
-![Preview image of app](https://github.com/dbc257/DigitalCrafts-Assignments/blob/master/API%20Webpage/API%20Project/images/homepage.png)
+![Preview image of app](https://github.com/MeerKatnip/Cannabis-Strain/blob/master/API%20Webpage/API%20Project/images/homepage.png)
 
 ## Live Link
 
